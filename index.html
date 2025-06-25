@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito:wght@400;600&family=Pacifico&family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+
+<canvas id="bubbles-canvas"></canvas>
 
     <header class="header">
         <div class="container">
@@ -22,6 +24,8 @@
                     <li><a href="#shifts-prices">Зміни та ціни</a></li>
                     <li><a href="#gallery">Галерея</a></li>
                     <li><a href="#contact">Контакти</a></li>
+                    <li><a href="#partners">Наші партнери</a></li>
+                    <li><a href="#counselor-school">Школа вожатого</a></li>
                 </ul>
             </nav>
             <button class="button buy-button-header">Придбати путівку</button>
@@ -31,27 +35,55 @@
     <main>
         <section class="hero">
             <div class="container">
-                <h1>Welcome до найкращого табору — «Зоряний»!</h1>
-                <p class="official-title">
-                    Комунальне некомерційне підприємство<br>
-                    «Дитячий заклад оздоровлення та відпочинку "ЗОРЯНИЙ"»<br>
-                    Кременчуцької міської ради Кременчуцького району Полтавської області
-                </p>
+                <img src="images/image.png" alt="Zoryany Camp" class="hero-image">
+                <div class="hero-row">
+                    <div class="weather-widget"></div>
+                    <p class="official-title">
+                        Комунальне некомерційне підприємство<br>
+                        «Дитячий заклад оздоровлення та відпочинку "ЗОРЯНИЙ"»<br>
+                        Кременчуцької міської ради Кременчуцького району Полтавської області
+                    </p>
+                    <div class="calendar-widget"></div>
+                </div>
                 <p class="hero-subtitle">Комфортабельний та якісний відпочинок на березі річки Псел.</p>
                 <button class="button buy-button-hero">Придбати путівку одним дотиком</button>
             </div>
         </section>
 
-        <section id="about" class="about">
+        <section class="parents-info" id="parents-info">
+            <div class="container">
+                <h2>Важливе для батьків</h2>
+                <div class="parents-buttons">
+                    <button class="counselor-nav-btn counselor-nav-pink">Оформлення путівки</button>
+                    <button class="counselor-nav-btn counselor-nav-blue">Необхідні документи для оформлення дитини у табір</button>
+                    <button class="counselor-nav-btn counselor-nav-green">Основні правила прийому дітей у табір</button>
+                    <a class="counselor-nav-btn counselor-nav-yellow" href="#packing">Збираємо валізу</a>
+                    <button class="counselor-nav-btn counselor-nav-pink">Розподілення дітей по загонах</button>
+                    <button class="counselor-nav-btn counselor-nav-blue">Категорично заборонено привозити у табір</button>
+                    <button class="counselor-nav-btn counselor-nav-green">Повернення дітей з табору</button>
+                    <button class="counselor-nav-btn counselor-nav-pink">Вперше у таборі</button>
+                    <button class="counselor-nav-btn counselor-nav-blue">Правила перебування у таборі</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
             <div class="container">
                 <h2>Про наш табір</h2>
                 <div class="about-content">
-                    <div class="about-image">
-                        <!-- User will add image here -->
-                        <img src="https://images.pexels.com/photos/159846/kids-joy-children-play-159846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Діти в таборі Зоряний">
+                    <div class="about-slider">
+                        <button class="about-slider-arrow left" aria-label="Попереднє фото">&#8592;</button>
+                        <div class="about-slider-main">
+                            <img src="images/slider/1.png" alt="Головне фото табору" class="about-slider-main-img">
+                        </div>
+                        <button class="about-slider-arrow right" aria-label="Наступне фото">&#8594;</button>
                     </div>
                     <div class="about-text">
-                        <p>"Зоряний" — це сучасний дитячий табір, що потопає у зелені. Ми вміщуємо близько 300 дітей за зміну, формуючи 12 затишних загонів. Кожен загін має свій окремий корпус, що створює атмосферу маленької родини.</p>
+                        <p>"Заклад розташований в екологічно чистому місці. Сьогодні на його території, площею 9 гектарів, знаходяться стаціонарні спальні корпуси, де можуть розміститися 384 дітей в одну зміну.
+
+                            До послуг вихованців збалансоване 6-разове харчування (з можливістю дієтичного) за рецептурою відомого кулінара Євгена Клопотенка, кіно-концертна зала, бібліотека, кімнати для гурткової роботи (прикладного, вокального, хореографічного мистецтв, студії медіа-культури, студії етики та краси, школи телеведучого), спортивні секції,  різноманітні майстер-класи, огороджений та облаштований пляж, альтанки, ігрові майданчики, майданчик вуличних тренажерів, туристичне містечко, стадіон, спортивні майданчики (футбол, міні-футбол - 2 шт., пляжний волейбол, волейбол, для легкої атлетики, баскетбол, артбол, бадмінтон ін.),   вуличні тренажери, тренажерна зала, стежинка здоров'я, прийом фіточаїів.
+                       
+                          Творчий педагогічний колектив однодумців зробить усе можливе, щоб час, проведений Вашими дітьми разом з нами, надовго залишив яскравий слід у юних серцях та приємні спогади про нових друзів!</p>
                         <p>Наша команда — це серце табору. З кожним загоном працює досвідчений вихователь та двоє енергійних вожатих (а в молодших загонах — троє!). Професійний психолог, методист, педагог-організатор та старший вихователь дбають про насичену, цікаву та безпечну програму відпочинку.</p>
                     </div>
                 </div>
@@ -149,25 +181,129 @@
             </div>
         </section>
 
+        <section id="counselor-school" class="counselor-school">
+            <div class="container">
+                <h2>Школа вожатого</h2>
+                <div class="counselor-school-content">
+                    <div class="counselor-school-image">
+                        <img src="https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Школа вожатого - навчання та практика">
+                    </div>
+                    <div class="counselor-school-text">
+                        <p>Мрієш стати справжнім лідером, організатором дитячого дозвілля та отримати унікальний досвід? Приєднуйся до нашої <strong>Школи вожатого</strong>! Тут ти навчишся працювати з дітьми, організовувати ігри, заходи, розвивати командний дух і відповідальність.</p>
+                        <div class="counselor-nav counselor-nav-compact">
+                            <button class="counselor-nav-btn counselor-nav-pink"><i class="fa-solid fa-chalkboard-user"></i>Навчання</button>
+                            <button class="counselor-nav-btn counselor-nav-blue"><i class="fa-solid fa-certificate"></i>Сертифікат</button>
+                            <button class="counselor-nav-btn counselor-nav-green"><i class="fa-solid fa-people-group"></i>Практика</button>
+                            <button class="counselor-nav-btn counselor-nav-yellow"><i class="fa-solid fa-star"></i>Лідерство</button>
+                        </div>
+                        <form class="counselor-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">Імʼя</label>
+                                    <input type="text" id="firstName" name="firstName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Прізвище</label>
+                                    <input type="text" id="lastName" name="lastName" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Номер телефону</label>
+                                    <input type="tel" id="phone" name="phone" required pattern="[0-9\-\+\s\(\)]*">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Електронна адреса</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="motivation">Мотиваційний лист</label>
+                                <textarea id="motivation" name="motivation" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="button">Зареєструватись</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="packing" id="packing">
+            <div class="container">
+                <h2>Збираємо валізу</h2>
+                <div class="packing-rows">
+                    <div class="packing-row">
+                        <div class="packing-item"><span class="packing-icon">🧢</span><span>Головний убір</span></div>
+                        <div class="packing-item"><span class="packing-icon">👗</span><span>Святковий одяг</span></div>
+                        <div class="packing-item"><span class="packing-icon">🧴</span><span>Рушники</span></div>
+                        <div class="packing-item"><span class="packing-icon">🤧</span><span>Носові хустинки</span></div>
+                        <div class="packing-item"><span class="packing-icon">🩲</span><span>Нижня білизна</span></div>
+                        <div class="packing-item"><span class="packing-icon">🧦</span><span>Шкарпетки</span></div>
+                    </div>
+                    <div class="packing-suitcase-row">
+                    </div>
+                    <div class="packing-row">
+                        <div class="packing-item"><span class="packing-icon">🧥</span><span>Теплий та повсякденний одяг</span></div>
+                        <div class="packing-item"><span class="packing-icon">👕</span><span>Спортивний одяг</span></div>
+                        <div class="packing-item"><span class="packing-icon">👟</span><span>Взуття</span></div>
+                        <div class="packing-item"><span class="packing-icon">🪥</span><span>Засоби особистої гігієни</span></div>
+                        <div class="packing-item"><span class="packing-icon">📚</span><span>2-3 улюблені книги</span></div>
+                        <div class="packing-item"><span class="packing-icon">🎸</span><span>Музичні інструменти</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contact" class="contact">
             <div class="container">
                 <h2>Контакти та запис</h2>
                 <p>Хочете дізнатись більше або познайомитись із керівництвом? Чекаємо на вас у нашому офісі або телефонуйте!</p>
-                <div class="contact-details">
-                    <p><strong>Адреса офісу:</strong> м. Кременчук, Полтавська обл. (уточніть адресу за телефоном)</p>
-                    <p><strong>Телефон:</strong> +38 (097) 205-50-81, +38 (0536) 74-34-64</p>
-                    <p><strong>Email:</strong> kr.zorianyi@gmail.com</p>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-details">
+                            <p><strong>Адреса офісу:</strong> м. Кременчук, Полтавська обл. (уточніть адресу за телефоном)</p>
+                            <p><strong>Телефон:</strong> +38 (097) 205-50-81, +38 (0536) 74-34-64</p>
+                            <p><strong>Email:</strong> kr.zorianyi@gmail.com</p>
+                        </div>
+                        <div class="contact-socials">
+                            <a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://youtube.com/" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <button class="button">Завітати до офісу</button>
+                    </div>
+                    <div class="contact-map">
+                        <iframe src="https://www.google.com/maps?q=Кременчук,+Полтавська+область,+Україна&output=embed" width="100%" height="320" style="border:0; border-radius:12px; box-shadow:0 2px 12px rgba(74,144,226,0.08);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Карта Кременчук"></iframe>
+                    </div>
                 </div>
-                <button class="button">Завітати до офісу</button>
             </div>
         </section>
     </main>
+
+    <section id="partners" class="partners">
+        <div class="container">
+            <h2>Наші партнери</h2>
+            <div class="partners-logos">
+                <div class="partner-logo">
+                    <img src="https://static.wixstatic.com/media/26a455_7274636952d74431a4f7e2a9a831518d~mv2.jpg/v1/fill/w_120,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/26a455_7274636952d74431a4f7e2a9a831518d~mv2.jpg" alt="Партнер 1">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://static.wixstatic.com/media/26a455_3e2e2e2e2e2e4e2e8e2e2e2e2e2e2e2e~mv2.png/v1/fill/w_120,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/26a455_3e2e2e2e2e2e4e2e8e2e2e2e2e2e2e2e~mv2.png" alt="Партнер 2">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://static.wixstatic.com/media/26a455_6e2e2e2e2e2e4e2e8e2e2e2e2e2e2e2e~mv2.png/v1/fill/w_120,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/26a455_6e2e2e2e2e2e4e2e8e2e2e2e2e2e2e2e~mv2.png" alt="Партнер 3">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
             <p>&copy; 2024 Дитячий табір "Зоряний". Всі права захищено.</p>
         </div>
     </footer>
+
+    <script src="js/toggle-pink-btn.js"></script>
 
 </body>
 </html> 
