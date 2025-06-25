@@ -1,0 +1,17 @@
+// Colors
+$primary-color: #4A90E2;    // Light Blue
+$secondary-color: #FDB8C0;  // Pink
+$white-color: #FFFFFF;
+$text-color: #333333;
+$background-color: #F9F9F9;
+$footer-background: #4A90E2;
+$button-bg-color: $secondary-color;
+$button-hover-bg-color: darken($secondary-color, 10%);
+
+// Fonts
+$heading-font: 'Comfortaa', cursive;
+$main-font: 'Nunito', sans-serif;
+
+// Breakpoints
+$tablet-width: 768px;
+$desktop-width: 1440px; 

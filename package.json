@@ -1,0 +1,20 @@
+{
+  "name": "zoryany-camp-site",
+  "version": "1.0.0",
+  "description": "Website for Zoryany children's camp",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "sass --watch scss/main.scss:css/main.css"
+  },
+  "keywords": [
+    "camp",
+    "zoryany",
+    "html",
+    "scss"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.77.2"
+  }
+} 
