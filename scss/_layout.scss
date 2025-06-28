@@ -807,18 +807,19 @@ main section {
     margin-top: 24px;
 }
 .packing-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     background: linear-gradient(135deg, #FDB8C0 0%, #4A90E2 100%);
     color: #fff;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(74,144,226,0.10);
     padding: 10px 8px;
-    font-size: 1.2em;
+    font-size: 1em;
     width: 200px;
     height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-weight: 600;
     cursor: pointer;
@@ -833,6 +834,25 @@ main section {
 .packing-icon {
     font-size: 3em;
     margin-bottom: 4px;
+    margin-top: 0;
+}
+.packing-item span:last-child {
+    color: #222;
+    border-radius: 8px;
+    padding: 2px 8px;
+    margin-top: 6px;
+    font-size: 1em;
+}
+@media (max-width: 900px) {
+    .packing-item {
+        width: 100px;
+        height: 100px;
+        font-size: 0.8em;
+        padding: 6px 2px;
+    }
+    .packing-icon {
+        font-size: 1.7em;
+    }
 }
 
 .packing-semicircle {
@@ -1075,6 +1095,7 @@ main section {
     align-items: flex-start;
     flex-wrap: wrap;
 }
+
 .documents-block {
     flex: 1 1 640px;
     min-width: 320px;
@@ -1083,14 +1104,7 @@ main section {
     flex-direction: column;
     align-items: stretch;
 }
-.documents-block h3 {
-    text-align: center;
-    margin-bottom: 16px;
-    color: #4A90E2;
-    font-family: 'Comfortaa', cursive;
-    font-size: 1.25rem;
-    font-weight: 700;
-}
+
 @media (max-width: 900px) {
     .documents-flex {
         flex-direction: column;
@@ -1100,4 +1114,63 @@ main section {
     .documents-block {
         max-width: 100%;
     }
-} 
+}
+
+.documents-block:last-child h3 {
+    margin-top: 40px;
+}
+
+.documents-flex .documents-block:nth-child(2) {
+    margin-top: -40px;
+}
+
+.departure-group {
+    padding: 60px 0 40px 0;
+}
+.departure-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.departure-info-block, .squad-info-block {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(74,144,226,0.08);
+    padding: 32px 28px;
+    flex: 1 1 420px;
+    min-width: 320px;
+    max-width: 600px;
+}
+.departure-info-block h2, .squad-info-block h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    color: #4A90E2;
+    margin-bottom: 18px;
+    text-align: center;
+}
+.departure-warning {
+    background: #FFE066;
+    color: #222;
+    border-radius: 8px;
+    padding: 10px 16px;
+    margin: 18px 0;
+    font-weight: 600;
+    text-align: center;
+}
+.squad-info-block p {
+    margin-bottom: 8px;
+}
+.squad-info-block p:last-child {
+    margin-bottom: 0;
+}
+@media (max-width: 900px) {
+    .departure-flex {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .departure-info-block, .squad-info-block {
+        max-width: 100%;
+    }
+}

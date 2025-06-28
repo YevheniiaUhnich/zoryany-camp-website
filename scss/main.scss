@@ -1,4 +1,195 @@
 @import 'variables';
 @import 'mixins';
 @import 'base';
-@import 'layout'; 
+@import 'layout';
+
+// Секція розподілення дітей по загонах
+.squad-meeting-container {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #FDB8C0 0%, #4A90E2 100%);
+    
+    .squad-meeting-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+    }
+    
+    .squad-distribution, .parents-meeting {
+        color: #333;
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            color: #2c3e50;
+        }
+    }
+    
+    .squad-distribution {
+        .squad-content {
+            p {
+                font-size: 1rem;
+                line-height: 1.7;
+                margin-bottom: 15px;
+                text-align: justify;
+                color: #34495e;
+            }
+            
+            .parents-notice {
+                background: rgba(255,255,255,0.8);
+                border-radius: 12px;
+                padding: 20px;
+                margin-top: 20px;
+                border: 2px solid rgba(74,144,226,0.3);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                
+                h3 {
+                    color: #e74c3c;
+                    font-size: 1.3rem;
+                    margin-bottom: 10px;
+                    text-align: center;
+                    font-weight: 700;
+                }
+                
+                p {
+                    margin-bottom: 0;
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    color: #2c3e50;
+                }
+            }
+        }
+    }
+    
+    .parents-meeting {
+        .meeting-content {
+            .meeting-rules {
+                list-style: none;
+                padding: 0;
+                margin-bottom: 20px;
+                
+                li {
+                    background: rgba(255,255,255,0.9);
+                    border-radius: 10px;
+                    padding: 15px;
+                    margin-bottom: 12px;
+                    font-size: 0.95rem;
+                    line-height: 1.6;
+                    color: #2c3e50;
+                    border-left: 3px solid #e74c3c;
+                    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+                    
+                    strong {
+                        color: #e74c3c;
+                        font-weight: 700;
+                    }
+                }
+            }
+            
+            .important-notice {
+                background: rgba(231, 76, 60, 0.1);
+                border: 2px solid #e74c3c;
+                border-radius: 12px;
+                padding: 20px;
+                margin: 20px 0;
+                text-align: center;
+                
+                h3 {
+                    color: #e74c3c;
+                    font-size: 1.3rem;
+                    margin-bottom: 10px;
+                    font-weight: 700;
+                }
+                
+                p {
+                    font-size: 1.1rem;
+                    line-height: 1.5;
+                    color: #2c3e50;
+                    font-weight: 600;
+                    margin: 0;
+                }
+            }
+            
+            .contact-info {
+                background: rgba(255,255,255,0.8);
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+                border: 2px solid rgba(74,144,226,0.3);
+                
+                p {
+                    font-size: 1rem;
+                    line-height: 1.6;
+                    color: #2c3e50;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        padding: 60px 0;
+        
+        .squad-meeting-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        .squad-distribution, .parents-meeting {
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+        
+        .squad-distribution .squad-content {
+            p {
+                font-size: 0.95rem;
+            }
+            
+            .parents-notice {
+                padding: 15px;
+                
+                h3 {
+                    font-size: 1.2rem;
+                }
+                
+                p {
+                    font-size: 0.95rem;
+                }
+            }
+        }
+        
+        .parents-meeting .meeting-content {
+            .meeting-rules li {
+                font-size: 0.9rem;
+                padding: 12px;
+            }
+            
+            .important-notice {
+                padding: 15px;
+                
+                h3 {
+                    font-size: 1.2rem;
+                }
+                
+                p {
+                    font-size: 1rem;
+                }
+            }
+            
+            .contact-info {
+                padding: 15px;
+                
+                p {
+                    font-size: 0.95rem;
+                }
+            }
+        }
+    }
+}
+
+// Секція збираємо валізу 
