@@ -1,0 +1,38 @@
+@import 'variables';
+@import 'mixins';
+
+// Header
+.header {
+    background-color: $white-color;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-family: $heading-font;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: $primary-color;
+    }
+
+    .nav ul {
+        display: flex;
+        gap: 30px;
+    }
+
+    .nav a {
+        font-weight: bold;
+        transition: color 0.3s ease;
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+} 

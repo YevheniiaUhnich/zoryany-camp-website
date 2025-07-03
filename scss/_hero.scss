@@ -1,0 +1,46 @@
+@import 'variables';
+@import 'mixins';
+
+// Hero Section
+.hero {
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('https://static.wixstatic.com/media/26a455_7274636952d74431a4f7e2a9a831518d~mv2.jpg/v1/fill/w_980,h_551,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/26a455_7274636952d74431a4f7e2a9a831518d~mv2.jpg') no-repeat center center/cover;
+    color: $text-color;
+    text-align: center;
+    padding: 120px 0;
+    position: relative;
+
+    h1 {
+        font-family: $heading-font;
+        color: $primary-color;
+    }
+    
+    .official-title {
+        font-family: 'Merriweather', serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin: 32px auto 28px auto;
+        line-height: 1.2;
+        color: $primary-color;
+        max-width: 700px;
+        text-align: center;
+        letter-spacing: 0.01em;
+        @media (min-width: 768px) {
+            font-size: 1.4rem;
+        }
+        @media (min-width: 1200px) {
+            font-size: 1.7rem;
+        }
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 15px;
+        margin: 0 auto 20px auto;
+    }
+} 

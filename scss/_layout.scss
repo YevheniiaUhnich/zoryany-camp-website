@@ -1160,3 +1160,62 @@ main section {
         max-width: 100%;
     }
 }
+
+// Accordion styles
+.accordion {
+  width: 100%;
+  margin: 0 auto 30px auto;
+  border-radius: 16px;
+  background: #f7fbff;
+  box-shadow: 0 4px 24px rgba(74,144,226,0.08);
+  overflow: hidden;
+}
+.accordion-item + .accordion-item {
+  border-top: 1px solid #e3eaf3;
+}
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: left;
+  padding: 22px 28px;
+  font-family: 'Comfortaa', 'Nunito', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4A90E2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 0;
+}
+.accordion-header[aria-expanded="true"] {
+  background: #eaf4fd;
+}
+.accordion-header i {
+  font-size: 1.3em;
+  color: #7ed957;
+  min-width: 28px;
+}
+.accordion-content {
+  padding: 0 28px 22px 56px;
+  background: none;
+  font-size: 1.08rem;
+  color: #222;
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.7;
+  transition: max-height 0.3s ease;
+}
+@media (max-width: 700px) {
+  .accordion-header {
+    font-size: 1.05rem;
+    padding: 16px 14px;
+    gap: 10px;
+  }
+  .accordion-content {
+    padding: 0 14px 14px 32px;
+    font-size: 0.98rem;
+  }
+}
