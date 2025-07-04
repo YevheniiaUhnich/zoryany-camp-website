@@ -335,4 +335,6 @@ function showModalDay(data, idx) {
       document.removeEventListener('keydown', escHandler);
     }
   });
-} 
+}
+
+export { renderWeatherWidget }; 

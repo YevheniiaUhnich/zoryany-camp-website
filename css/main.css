@@ -124,7 +124,7 @@ img {
 }
 
 .hero {
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../images/111.jpg") no-repeat center center/cover;
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
   color: #333333;
   text-align: center;
   padding: 120px 0;
@@ -1466,6 +1466,77 @@ main section {
   }
   .parents-notice-title {
     font-size: 0.98em;
+  }
+}
+.food-products-grid {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.food-allowed, .food-forbidden {
+  flex: 1;
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.food-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.food-section-header i {
+  font-size: 1.4em;
+}
+
+.food-allowed .food-section-header i {
+  color: #28a745;
+}
+
+.food-forbidden .food-section-header i {
+  color: #dc3545;
+}
+
+.food-section-header h4 {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #333;
+}
+
+.food-allowed ul, .food-forbidden ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.food-allowed li, .food-forbidden li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .food-products-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .food-allowed, .food-forbidden {
+    padding: 16px;
+  }
+  .food-section-header {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  .food-section-header i {
+    font-size: 1.2em;
+  }
+  .food-section-header h4 {
+    font-size: 1em;
   }
 }
 .squad-meeting-container {

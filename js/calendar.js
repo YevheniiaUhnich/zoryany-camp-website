@@ -162,4 +162,6 @@ function showCalendarDayModal(date) {
       document.removeEventListener('keydown', escHandler);
     }
   });
-} 
+}
+
+export { renderCalendarWidget }; 

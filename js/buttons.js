@@ -124,4 +124,6 @@ function showConfetti(button) {
   }
 
   draw();
-} 
+}
+
+export { initButtons }; 

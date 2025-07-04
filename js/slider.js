@@ -91,8 +91,4 @@ function initGalleryLightbox() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  initAboutSlider();
-  initGallerySlider();
-  initGalleryLightbox();
-}); 
+export { initAboutSlider, initGallerySlider, initGalleryLightbox }; 
