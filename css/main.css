@@ -1390,6 +1390,84 @@ main section {
     font-size: 0.98rem;
   }
 }
+.accordion-detail-btn {
+  margin-left: auto;
+  background: #eaf4fd;
+  color: #4A90E2;
+  font-size: 0.95em;
+  padding: 6px 8px;
+  border-radius: 50%;
+  border: none;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 1px 4px rgba(74, 144, 226, 0.07);
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion-detail-btn i {
+  font-size: 0.9em;
+  transition: transform 0.2s;
+}
+
+.accordion-header:hover .accordion-detail-btn,
+.accordion-header:focus .accordion-detail-btn {
+  background: #d2e8fa;
+  color: #0077ff;
+  transform: scale(1.05);
+}
+
+.accordion-header[aria-expanded=true] .accordion-detail-btn i {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 700px) {
+  .accordion-detail-btn {
+    font-size: 0.88em;
+    padding: 5px 6px;
+    width: 24px;
+    height: 24px;
+  }
+  .accordion-detail-btn i {
+    font-size: 0.85em;
+  }
+}
+.parents-notice {
+  background: #fff6fa;
+  border: 2px solid #FDB8C0;
+  border-radius: 14px;
+  padding: 18px 22px 14px 22px;
+  margin: 18px 0 14px 0;
+  font-size: 1.04rem;
+  color: #b23a48;
+  box-shadow: 0 2px 10px rgba(253, 184, 192, 0.07);
+}
+
+.parents-notice-title {
+  font-size: 1.05em;
+  font-weight: 600;
+  color: #e0557e;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 700px) {
+  .parents-notice {
+    padding: 10px 8px 8px 8px;
+    font-size: 0.97rem;
+  }
+  .parents-notice-title {
+    font-size: 0.98em;
+  }
+}
 .squad-meeting-container {
   padding: 80px 0;
   background: none;
