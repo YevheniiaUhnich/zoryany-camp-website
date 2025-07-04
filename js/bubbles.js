@@ -143,4 +143,6 @@ function initBubblesAnimation() {
   }
   
   draw();
-} 
+}
+
+export { initBubblesAnimation }; 

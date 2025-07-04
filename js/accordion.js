@@ -1,6 +1,8 @@
 // Accordion logic for 'Важливе для батьків'
 export function initAccordion() {
+  console.log('initAccordion called');
   const items = document.querySelectorAll('.accordion-item');
+  console.log('Accordion items found:', items.length);
   items.forEach(item => {
     const header = item.querySelector('.accordion-header');
     const content = item.querySelector('.accordion-content');

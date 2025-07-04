@@ -1,3 +1,6 @@
+import { initAccordion } from './accordion.js';
+import { initBubblesAnimation } from './bubbles.js';
+
 // MAIN JAVASCRIPT FILE - INITIALIZES ALL MODULES
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize all modules
@@ -17,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // (видалено, бо слайдер більше не використовується)
 
 // Accordion logic for 'Важливе для батьків'
-import { initAccordion } from './accordion.js';
 
 // Accordion
 initAccordion(); 
