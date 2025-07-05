@@ -43,4 +43,59 @@
         border-radius: 15px;
         margin: 0 auto 20px auto;
     }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .button {
+            min-width: 250px;
+            font-size: 1rem;
+            padding: 15px 30px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+
+            @media (min-width: 768px) {
+                min-width: 280px;
+                font-size: 1.1rem;
+                padding: 18px 35px;
+            }
+        }
+
+        .buy-button-hero {
+            background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%));
+            color: white;
+            box-shadow: 0 4px 15px rgba($primary-color, 0.3);
+
+            &:hover {
+                background: linear-gradient(135deg, darken($primary-color, 10%), darken($primary-color, 20%));
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba($primary-color, 0.4);
+            }
+        }
+
+        .book-button-hero {
+            background: linear-gradient(135deg, $secondary-color, darken($secondary-color, 10%));
+            color: white;
+            box-shadow: 0 4px 15px rgba($secondary-color, 0.3);
+
+            &:hover {
+                background: linear-gradient(135deg, darken($secondary-color, 10%), darken($secondary-color, 20%));
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba($secondary-color, 0.4);
+            }
+        }
+    }
 } 
