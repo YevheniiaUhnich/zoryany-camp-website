@@ -75,14 +75,14 @@
         }
 
         .buy-button-hero {
-            background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%));
+            background: linear-gradient(135deg, $secondary-color, darken($secondary-color, 10%));
             color: white;
-            box-shadow: 0 4px 15px rgba($primary-color, 0.3);
+            box-shadow: 0 4px 15px rgba($secondary-color, 0.3);
 
             &:hover {
-                background: linear-gradient(135deg, darken($primary-color, 10%), darken($primary-color, 20%));
+                background: linear-gradient(135deg, darken($secondary-color, 10%), darken($secondary-color, 20%));
                 transform: translateY(-2px);
-                box-shadow: 0 6px 20px rgba($primary-color, 0.4);
+                box-shadow: 0 6px 20px rgba($secondary-color, 0.4);
             }
         }
 
@@ -253,4 +253,82 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.boy-age-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.boy-age-btn {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #4A90E2, #357ABD);
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+    @media (max-width: 480px) {
+        width: 200px;
+        height: 200px;
+        font-size: 1.3rem;
+    }
+    &:hover {
+        background: linear-gradient(135deg, #357ABD, #2C5F9E);
+        transform: translateY(-5px);
+        box-shadow: 0 12px 35px rgba(74, 144, 226, 0.4);
+    }
+}
+
+.girl-age-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.girl-age-btn {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, $primary-color, darken($primary-color, 10%));
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+    @media (max-width: 480px) {
+        width: 200px;
+        height: 200px;
+        font-size: 1.3rem;
+    }
+    &:hover {
+        background: linear-gradient(135deg, darken($primary-color, 10%), darken($primary-color, 20%));
+        transform: translateY(-5px);
+        box-shadow: 0 12px 35px rgba($primary-color, 0.4);
+    }
 } 

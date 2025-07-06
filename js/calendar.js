@@ -101,8 +101,12 @@ function showCalendarDayModal(date) {
   
   content.innerHTML = `
     <div style="text-align: center; margin-bottom: 20px;">
-      <div style="font-size: 2em; color: #4A90E2; margin-bottom: 10px;">📅</div>
-      <h2 style="margin: 0 0 10px 0; color: #333;">${weekDays[date.getDay()]}</h2>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 32px; margin-bottom: 10px;">
+        <button class="calendar-modal-action" style="padding: 8px 18px; background: #4A90E2; color: #fff; border: none; border-radius: 24px; font-size: 1em; font-weight: 600; cursor: pointer; transition: background 0.2s;">Відео дня</button>
+        <div style="font-size: 2em; color: #4A90E2;">📅</div>
+        <button class="calendar-modal-action" style="padding: 8px 18px; background: #4A90E2; color: #fff; border: none; border-radius: 24px; font-size: 1em; font-weight: 600; cursor: pointer; transition: background 0.2s;">Фото дня</button>
+      </div>
+      <h2 style="margin: 0 0 10px 0; color: #333; font-size: 1.4em;">${weekDays[date.getDay()]}</h2>
       <div style="font-size: 1.5em; color: #666; margin-bottom: 15px;">
         ${date.getDate()} ${monthNames[date.getMonth()]} ${date.getFullYear()}
       </div>

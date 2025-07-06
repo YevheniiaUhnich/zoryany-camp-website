@@ -22,6 +22,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    align-self: flex-start;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    // border: 2px dashed red; // розкоментуйте для візуалізації меж
+    @media (min-width: 992px) {
+        padding-right: 30px;
+        padding-left: 0;
+    }
+}
+
+.about-content .about-text * {
+    text-align: left !important;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
 } 

@@ -106,9 +106,7 @@ main section {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    
 }
 
 // Features Section
@@ -1355,4 +1353,73 @@ main section {
   .food-section-header h4 {
     font-size: 1em;
   }
+}
+
+.accordion-info-box {
+    background: #f0f7fd;
+    border: 2px solid #4A90E2;
+    border-radius: 18px;
+    padding: 28px 32px;
+    margin: 24px 0;
+    color: #225;
+    font-size: 1.15rem;
+    box-shadow: 0 2px 12px rgba(74,144,226,0.08);
+}
+
+.accordion-info-box h3 {
+    color: #357ABD;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.accordion-info-box p {
+    margin-bottom: 0;
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+.notice-green {
+  background: linear-gradient(90deg, #e6fbe6 0%, #d2f8d2 100%);
+  border: 2px solid #7ed957;
+  color: #256029;
+  border-radius: 18px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 12px rgba(126, 217, 87, 0.08);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: box-shadow 0.2s;
+}
+
+.notice-green h3, .notice-green .parents-notice-title {
+  color: #256029;
+}
+
+.accordion-content ul,
+.accordion-content ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.accordion-content ul li,
+.accordion-content ol li {
+  position: relative;
+  padding-left: 2em;
+  margin-bottom: 0.5em;
+}
+
+.accordion-content ul li::before,
+.accordion-content ol li::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 0.2em;
+  top: 0.7em;
+  width: 1.1em;
+  height: 1.1em;
+  background: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 3L11 8L5 13" stroke="%234A90E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
+  background-size: 1.1em 1.1em;
+  content: '';
 }

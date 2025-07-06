@@ -189,9 +189,6 @@ main section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 .features-grid {
@@ -1539,6 +1536,75 @@ main section {
     font-size: 1em;
   }
 }
+.accordion-info-box {
+  background: #f0f7fd;
+  border: 2px solid #4A90E2;
+  border-radius: 18px;
+  padding: 28px 32px;
+  margin: 24px 0;
+  color: #225;
+  font-size: 1.15rem;
+  box-shadow: 0 2px 12px rgba(74, 144, 226, 0.08);
+}
+
+.accordion-info-box h3 {
+  color: #357ABD;
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.accordion-info-box p {
+  margin-bottom: 0;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.notice-green {
+  background: linear-gradient(90deg, #e6fbe6 0%, #d2f8d2 100%);
+  border: 2px solid #7ed957;
+  color: #256029;
+  border-radius: 18px;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 12px rgba(126, 217, 87, 0.08);
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: box-shadow 0.2s;
+}
+
+.notice-green h3, .notice-green .parents-notice-title {
+  color: #256029;
+}
+
+.accordion-content ul,
+.accordion-content ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.accordion-content ul li,
+.accordion-content ol li {
+  position: relative;
+  padding-left: 2em;
+  margin-bottom: 0.5em;
+}
+
+.accordion-content ul li::before,
+.accordion-content ol li::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0.2em;
+  top: 0.7em;
+  width: 1.1em;
+  height: 1.1em;
+  background: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 3L11 8L5 13" stroke="%234A90E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center center;
+  background-size: 1.1em 1.1em;
+  content: "";
+}
+
 .hero {
   background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6));
   color: #333333;
@@ -1613,14 +1679,14 @@ main section {
   }
 }
 .hero .hero-buttons .buy-button-hero {
-  background: linear-gradient(135deg, #4A90E2, rgb(34.3857142857, 117.3857142857, 214.6142857143));
+  background: linear-gradient(135deg, #FDB8C0, rgb(251.602739726, 134.397260274, 147.9863013699));
   color: white;
-  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+  box-shadow: 0 4px 15px rgba(253, 184, 192, 0.3);
 }
 .hero .hero-buttons .buy-button-hero:hover {
-  background: linear-gradient(135deg, rgb(34.3857142857, 117.3857142857, 214.6142857143), rgb(27.3428571429, 93.3428571429, 170.6571428571));
+  background: linear-gradient(135deg, rgb(251.602739726, 134.397260274, 147.9863013699), rgb(250.2054794521, 84.7945205479, 103.9726027397));
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+  box-shadow: 0 6px 20px rgba(253, 184, 192, 0.4);
 }
 .hero .hero-buttons .book-button-hero {
   background: linear-gradient(135deg, #FDB8C0, rgb(251.602739726, 134.397260274, 147.9863013699));
@@ -1769,6 +1835,88 @@ main section {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.boy-age-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.boy-age-btn {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #4A90E2, #357ABD);
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  .boy-age-btn {
+    width: 200px;
+    height: 200px;
+    font-size: 1.3rem;
+  }
+}
+.boy-age-btn:hover {
+  background: linear-gradient(135deg, #357ABD, #2C5F9E);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(74, 144, 226, 0.4);
+}
+
+.girl-age-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.girl-age-btn {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #4A90E2, rgb(34.3857142857, 117.3857142857, 214.6142857143));
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  .girl-age-btn {
+    width: 200px;
+    height: 200px;
+    font-size: 1.3rem;
+  }
+}
+.girl-age-btn:hover {
+  background: linear-gradient(135deg, rgb(34.3857142857, 117.3857142857, 214.6142857143), rgb(27.3428571429, 93.3428571429, 170.6571428571));
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(74, 144, 226, 0.4);
 }
 
 .squad-meeting-container {
