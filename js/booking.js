@@ -5,8 +5,13 @@ function initBookingModal() {
     const bookingModalClose = document.getElementById('bookingModalClose');
     const genderButtons = document.querySelectorAll('.gender-button');
 
-    if (!bookingButton || !bookingModal) {
-        console.error('Booking modal elements not found');
+    if (!bookingButton) {
+        console.error('Booking button not found!');
+        return;
+    }
+
+    if (!bookingModal) {
+        console.error('Booking modal not found!');
         return;
     }
 
@@ -24,7 +29,11 @@ function initBookingModal() {
     }
 
     // Закриття кнопкою "Закрити"
-    bookingModalClose.addEventListener('click', closeModal);
+    if (bookingModalClose) {
+        bookingModalClose.addEventListener('click', function() {
+            closeModal();
+        });
+    }
 
     // Закриття при кліку поза модальним вікном
     bookingModal.addEventListener('click', function(e) {
@@ -41,10 +50,9 @@ function initBookingModal() {
     });
 
     // Обробка кліків по кнопках вибору статі
-    genderButtons.forEach(button => {
+    genderButtons.forEach((button, index) => {
         button.addEventListener('click', function() {
             const gender = this.getAttribute('data-gender');
-            console.log('Обрана стать:', gender);
             
             // Показуємо повідомлення про вибір
             alert(`Обрано: ${gender === 'boy' ? 'Хлопчик' : 'Дівчинка'}. Скоро тут буде форма бронювання!`);

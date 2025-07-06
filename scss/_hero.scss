@@ -107,23 +107,25 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.9), rgba(253, 184, 192, 0.9));
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 1000 !important;
     opacity: 0;
-    transition: opacity 0.3s;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
 
     &.active {
         opacity: 1;
+        visibility: visible;
     }
 
     .booking-modal-content {
         background: white;
         border-radius: 16px;
-        padding: 24px;
-        max-width: 400px;
+        padding: 48px;
+        max-width: 800px;
         width: 90%;
         max-height: 80vh;
         overflow-y: auto;
@@ -140,18 +142,18 @@
         margin-bottom: 20px;
 
         h3 {
-            margin: 0 0 10px 0;
+            margin: 0 0 20px 0;
             color: #333;
-            font-size: 1.5rem;
+            font-size: 3rem;
             font-weight: 700;
         }
     }
 
     .booking-modal-body {
         p {
-            font-size: 1.1rem;
+            font-size: 2.2rem;
             color: #666;
-            margin-bottom: 30px;
+            margin-bottom: 60px;
             font-weight: 600;
             text-align: center;
         }
@@ -171,8 +173,8 @@
         }
 
         .gender-button {
-            width: 120px;
-            height: 120px;
+            width: 240px;
+            height: 240px;
             border-radius: 50%;
             border: none;
             cursor: pointer;
@@ -187,8 +189,8 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 
             @media (max-width: 480px) {
-                width: 100px;
-                height: 100px;
+                width: 200px;
+                height: 200px;
             }
 
             i {
@@ -197,7 +199,7 @@
             }
 
             span {
-                font-size: 0.9rem;
+                font-size: 1.8rem;
             }
 
             &.boy-button {
@@ -224,19 +226,31 @@
         }
 
         .close-button {
-            width: 100%;
-            padding: 12px;
+            width: 240px;
+            padding: 24px;
             background: #4A90E2;
             color: white;
             border: none;
-            border-radius: 8px;
-            font-size: 1em;
+            border-radius: 40px;
+            font-size: 1.8em;
             cursor: pointer;
             transition: background 0.2s;
+            margin: 0 auto;
+            display: block;
 
             &:hover {
                 background: #357abd;
             }
         }
     }
+}
+
+.gender-icon {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 16px;
+    object-fit: contain;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 } 
