@@ -4,7 +4,6 @@ import { renderWeatherWidget } from './weather.js';
 import { renderCalendarWidget } from './calendar.js';
 import { initAboutSlider, initGallerySlider, initGalleryLightbox } from './slider.js';
 import { initButtons } from './buttons.js';
-import { initBookingModal } from './booking.js';
 
 // MAIN JAVASCRIPT FILE - INITIALIZES ALL MODULES
 document.addEventListener('DOMContentLoaded', function() {
@@ -14,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
   initGallerySlider();
   initGalleryLightbox();
   initButtons();
-  initBookingModal();
   
   // Initialize widgets
   renderWeatherWidget();
