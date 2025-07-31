@@ -33,34 +33,56 @@ function initCounselorSchoolForm() {
     // Показуємо повідомлення про завантаження
     showCounselorFormMessage('Відправляємо заявку...', 'info');
     
-    // Створюємо URL з параметрами для Google Apps Script
-    const formUrl = form.action;
-    const params = new URLSearchParams();
-    params.append('Імʼя', firstName);
-    params.append('Прізвище', lastName);
-    params.append('Телефон', phone);
-    params.append('Email', email);
-    params.append('Мотивація', motivation);
+    // Спробуємо POST спочатку
+    const formData = new FormData();
+    formData.append('firstName', firstName);
+    formData.append('lastName', lastName);
+    formData.append('phone', phone);
+    formData.append('email', email);
+    formData.append('motivation', motivation);
 
-    // Відправляємо через iframe для обходу CORS
-    const iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    iframe.src = `${formUrl}?${params.toString()}`;
-    document.body.appendChild(iframe);
-
-    // Показуємо успіх після короткої затримки
-    setTimeout(() => {
+    console.log('Trying POST method...');
+    
+    fetch(form.action, {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      console.log('POST response status:', response.status);
+      return response.text();
+    })
+    .then(data => {
+      console.log('POST response data:', data);
       showCounselorFormMessage('Дякуємо за реєстрацію! Ми звʼяжемося з вами найближчим часом.', 'success');
       form.reset();
-      document.body.removeChild(iframe);
-    }, 2000);
+    })
+    .catch((error) => {
+      console.log('POST failed, trying GET method...');
+      
+      // Якщо POST не працює, спробуємо GET через iframe
+      const formUrl = form.action;
+      const params = new URLSearchParams();
+      params.append('firstName', firstName);
+      params.append('lastName', lastName);
+      params.append('phone', phone);
+      params.append('email', email);
+      params.append('motivation', motivation);
 
-    // Альтернативний спосіб через window.open
-    /*
-    const submitUrl = `${formUrl}?${params.toString()}`;
-    window.open(submitUrl, '_blank');
-    showCounselorFormMessage('Форма відкрилася у новому вікні. Заповніть її та відправте.', 'info');
-    */
+      console.log('Form URL:', formUrl);
+      console.log('Parameters:', params.toString());
+      console.log('Full URL:', `${formUrl}?${params.toString()}`);
+
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = `${formUrl}?${params.toString()}`;
+      document.body.appendChild(iframe);
+
+      setTimeout(() => {
+        showCounselorFormMessage('Дякуємо за реєстрацію! Ми звʼяжемося з вами найближчим часом.', 'success');
+        form.reset();
+        document.body.removeChild(iframe);
+      }, 2000);
+    });
   });
 }
 
