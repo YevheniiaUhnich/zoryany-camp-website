@@ -33,28 +33,34 @@ function initCounselorSchoolForm() {
     // Показуємо повідомлення про завантаження
     showCounselorFormMessage('Відправляємо заявку...', 'info');
     
-    // Формуємо дані для Google Forms
-    const formData = new FormData();
-    formData.append('firstName', firstName);
-    formData.append('lastName', lastName);
-    formData.append('phone', phone);
-    formData.append('email', email);
-    formData.append('motivation', motivation);
+    // Створюємо URL з параметрами для Google Apps Script
+    const formUrl = form.action;
+    const params = new URLSearchParams();
+    params.append('Імʼя', firstName);
+    params.append('Прізвище', lastName);
+    params.append('Телефон', phone);
+    params.append('Email', email);
+    params.append('Мотивація', motivation);
 
-    // Відправляємо на Google Forms
-    fetch(form.action, {
-      method: 'POST',
-      body: formData,
-      mode: 'no-cors'
-    })
-    .then(() => {
+    // Відправляємо через iframe для обходу CORS
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = `${formUrl}?${params.toString()}`;
+    document.body.appendChild(iframe);
+
+    // Показуємо успіх після короткої затримки
+    setTimeout(() => {
       showCounselorFormMessage('Дякуємо за реєстрацію! Ми звʼяжемося з вами найближчим часом.', 'success');
       form.reset();
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-      showCounselorFormMessage('Помилка відправки. Спробуйте ще раз або звʼяжіться з нами.', 'error');
-    });
+      document.body.removeChild(iframe);
+    }, 2000);
+
+    // Альтернативний спосіб через window.open
+    /*
+    const submitUrl = `${formUrl}?${params.toString()}`;
+    window.open(submitUrl, '_blank');
+    showCounselorFormMessage('Форма відкрилася у новому вікні. Заповніть її та відправте.', 'info');
+    */
   });
 }
 
