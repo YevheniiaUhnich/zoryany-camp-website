@@ -20,6 +20,41 @@ function initButtons() {
 }
 
 function showConfetti(button) {
+  // Sound effect for confetti
+  function playConfettiSound() {
+    try {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      
+      // Create multiple oscillators for rich sound
+      for (let i = 0; i < 3; i++) {
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        // Different frequencies for variety
+        const frequencies = [800, 1200, 1600];
+        oscillator.frequency.setValueAtTime(frequencies[i], audioContext.currentTime);
+        oscillator.frequency.exponentialRampToValueAtTime(frequencies[i] * 0.5, audioContext.currentTime + 0.3);
+        
+        // Volume envelope
+        gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+        gainNode.gain.linearRampToValueAtTime(0.1, audioContext.currentTime + 0.01);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+        
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + 0.3);
+      }
+    } catch (e) {
+      // Fallback for browsers that don't support Web Audio API
+      console.log('Audio not supported');
+    }
+  }
+
+  // Play sound immediately
+  playConfettiSound();
+
   const canvas = document.createElement('canvas');
   const ctx = canvas.getContext('2d');
   canvas.style.cssText = `
