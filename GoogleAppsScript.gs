@@ -16,18 +16,30 @@ function intelSetup() {
 
 function doGet(e) {
   Logger.log('doGet called with parameters: ' + JSON.stringify(e.parameter))
-  return doPost(e)
+  return processFormData(e.parameter)
 }
 
 function doPost(e) {
   Logger.log('doPost called with parameters: ' + JSON.stringify(e.parameter))
+  return processFormData(e.parameter)
+}
+
+function processFormData(parameters) {
+  Logger.log('processFormData called with: ' + JSON.stringify(parameters))
   
   const lock = LockService.getScriptLock()
   lock.tryLock(10000)
 
   try {
     Logger.log('=== START PROCESSING ===')
-    Logger.log('Parameters received: ' + JSON.stringify(e.parameter))
+    Logger.log('Parameters received: ' + JSON.stringify(parameters))
+    
+    // Детальне логування кожного параметра
+    Logger.log('=== PARAMETER DETAILS ===')
+    for (const [key, value] of Object.entries(parameters)) {
+      Logger.log(key + ': "' + value + '"')
+    }
+    Logger.log('========================')
     
     const spreadsheetId = scriptProp.getProperty('key')
     Logger.log('Spreadsheet ID from properties: ' + spreadsheetId)
@@ -60,34 +72,34 @@ function doPost(e) {
     const nextRow = sheet.getLastRow() + 1
     Logger.log('Next row will be: ' + nextRow)
     
-    // Мапінг латинських параметрів на українські заголовки
-    const parameterMapping = {
-      'firstName': 'Імʼя',
-      'lastName': 'Прізвище', 
-      'phone': 'Телефон',
-      'email': 'Email',
-      'motivation': 'Мотивація'
-    }
+    // Використовуємо нові назви параметрів
+    const newRow = []
     
-    const newRow = headers.map(function(header, index) {
-      if (header === 'Date') {
-        Logger.log('Column ' + index + ': Date field, setting current date')
-        return new Date()
-      }
-      
-      // Знаходимо латинський параметр для цього заголовка
-      for (const [latParam, ukrHeader] of Object.entries(parameterMapping)) {
-        if (ukrHeader === header) {
-          const value = e.parameter[latParam] || ''
-          Logger.log('Column ' + index + ': ' + header + ' -> ' + latParam + ' = ' + value)
-          return value
-        }
-      }
-      
-      const value = e.parameter[header] || ''
-      Logger.log('Column ' + index + ': ' + header + ' = ' + value)
-      return value
-    })
+    // Імʼя (перший стовпець) - використовуємо 'fname'
+    newRow.push(parameters['fname'] || '')
+    Logger.log('Column 0 (Імʼя): "' + (parameters['fname'] || '') + '"')
+    
+    // Прізвище (другий стовпець) - використовуємо 'lname'
+    newRow.push(parameters['lname'] || '')
+    Logger.log('Column 1 (Прізвище): "' + (parameters['lname'] || '') + '"')
+    
+    // Телефон (третій стовпець)
+    newRow.push(parameters['phone'] || '')
+    Logger.log('Column 2 (Телефон): "' + (parameters['phone'] || '') + '"')
+    
+    // Email (четвертий стовпець)
+    newRow.push(parameters['email'] || '')
+    Logger.log('Column 3 (Email): "' + (parameters['email'] || '') + '"')
+    
+    // Мотивація (п'ятий стовпець)
+    newRow.push(parameters['motivation'] || '')
+    Logger.log('Column 4 (Мотивація): "' + (parameters['motivation'] || '') + '"')
+    
+    // Додаємо дату, якщо є стовпець Date
+    if (headers.length > 5 && headers[5] === 'Date') {
+      newRow.push(new Date())
+      Logger.log('Column 5 (Date): current date')
+    }
 
     Logger.log('New row data: ' + JSON.stringify(newRow))
     
