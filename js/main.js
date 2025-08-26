@@ -1,14 +1,18 @@
-import { initAccordion } from './accordion.js';
-import { initBubblesAnimation } from './bubbles.js';
-import { renderWeatherWidget } from './weather.js';
-import { renderCalendarWidget } from './calendar.js';
-import { initAboutSlider, initGallerySlider, initGalleryLightbox } from './slider.js';
-import { initButtons } from './buttons.js';
-import { initBookingModal } from './booking.js';
-import { initCounselorSchoolForm } from './counselorSchool.js';
+import { initAccordion } from "./accordion.js";
+import { initBubblesAnimation } from "./bubbles.js";
+import { renderWeatherWidget } from "./weather.js";
+import { renderCalendarWidget } from "./calendar.js";
+import {
+  initAboutSlider,
+  initGallerySlider,
+  initGalleryLightbox,
+} from "./slider.js";
+import { initButtons } from "./buttons.js";
+import { initBookingModal } from "./booking.js";
+import { initCounselorSchoolForm } from "./counselorSchool.js";
 
 // MAIN JAVASCRIPT FILE - INITIALIZES ALL MODULES
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Initialize all modules
   initBubblesAnimation();
   initAboutSlider();
@@ -17,11 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
   initButtons();
   initBookingModal();
   initCounselorSchoolForm();
-  
+
   // Initialize widgets
   renderWeatherWidget();
   renderCalendarWidget();
 
   // Accordion
   initAccordion();
-}); 
+});

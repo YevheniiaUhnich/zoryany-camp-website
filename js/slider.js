@@ -1,28 +1,30 @@
 // ABOUT SLIDER LOGIC
 function initAboutSlider() {
   const aboutSliderImages = [
-    'images/slider/1.png',
-    'images/slider/2.png',
-    'images/slider/3.png',
-    'images/slider/4.png',
-    'images/slider/5.png'
+    "images/slider/1.png",
+    "images/slider/2.png",
+    "images/slider/3.png",
+    "images/slider/4.png",
+    "images/slider/5.png",
   ];
   let aboutSliderIdx = 0;
-  const mainImg = document.querySelector('.about-slider-main-img');
-  const leftBtn = document.querySelector('.about-slider-arrow.left');
-  const rightBtn = document.querySelector('.about-slider-arrow.right');
-  
+  const mainImg = document.querySelector(".about-slider-main-img");
+  const leftBtn = document.querySelector(".about-slider-arrow.left");
+  const rightBtn = document.querySelector(".about-slider-arrow.right");
+
   if (mainImg && leftBtn && rightBtn) {
     function updateAboutSlider() {
       mainImg.src = aboutSliderImages[aboutSliderIdx];
     }
-    
-    leftBtn.addEventListener('click', function() {
-      aboutSliderIdx = (aboutSliderIdx - 1 + aboutSliderImages.length) % aboutSliderImages.length;
+
+    leftBtn.addEventListener("click", function () {
+      aboutSliderIdx =
+        (aboutSliderIdx - 1 + aboutSliderImages.length) %
+        aboutSliderImages.length;
       updateAboutSlider();
     });
-    
-    rightBtn.addEventListener('click', function() {
+
+    rightBtn.addEventListener("click", function () {
       aboutSliderIdx = (aboutSliderIdx + 1) % aboutSliderImages.length;
       updateAboutSlider();
     });
@@ -31,10 +33,10 @@ function initAboutSlider() {
 
 // GALLERY SLIDER LOGIC
 function initGallerySlider() {
-  const track = document.querySelector('.gallery-slider-track');
-  const slides = Array.from(document.querySelectorAll('.gallery-slide'));
-  const leftBtn = document.querySelector('.gallery-slider-arrow.left');
-  const rightBtn = document.querySelector('.gallery-slider-arrow.right');
+  const track = document.querySelector(".gallery-slider-track");
+  const slides = Array.from(document.querySelectorAll(".gallery-slide"));
+  const leftBtn = document.querySelector(".gallery-slider-arrow.left");
+  const rightBtn = document.querySelector(".gallery-slider-arrow.right");
   const visibleSlides = 3;
   let current = 0;
 
@@ -55,12 +57,12 @@ function initGallerySlider() {
     track.style.transform = `translateX(-${offset}px)`;
   }
 
-  leftBtn.addEventListener('click', function() {
+  leftBtn.addEventListener("click", function () {
     current = (current - 1 + slides.length) % slides.length;
     updateGallerySlider();
   });
 
-  rightBtn.addEventListener('click', function() {
+  rightBtn.addEventListener("click", function () {
     current = (current + 1) % slides.length;
     updateGallerySlider();
   });
@@ -69,26 +71,26 @@ function initGallerySlider() {
   updateGallerySlider();
 
   // Адаптація при зміні розміру
-  window.addEventListener('resize', updateGallerySlider);
+  window.addEventListener("resize", updateGallerySlider);
 }
 
 // LIGHTBOX для галереї
 function initGalleryLightbox() {
-  const overlay = document.getElementById('galleryLightbox');
-  const overlayImg = document.getElementById('galleryLightboxImg');
-  const gallerySlides = document.querySelectorAll('.gallery-slide img');
+  const overlay = document.getElementById("galleryLightbox");
+  const overlayImg = document.getElementById("galleryLightboxImg");
+  const gallerySlides = document.querySelectorAll(".gallery-slide img");
 
-  gallerySlides.forEach(img => {
-    img.addEventListener('click', function(e) {
+  gallerySlides.forEach((img) => {
+    img.addEventListener("click", function (e) {
       overlayImg.src = img.src;
-      overlay.classList.add('active');
+      overlay.classList.add("active");
     });
   });
 
-  overlay.addEventListener('click', function(e) {
-    overlay.classList.remove('active');
-    overlayImg.src = '';
+  overlay.addEventListener("click", function (e) {
+    overlay.classList.remove("active");
+    overlayImg.src = "";
   });
 }
 
-export { initAboutSlider, initGallerySlider, initGalleryLightbox }; 
+export { initAboutSlider, initGallerySlider, initGalleryLightbox };

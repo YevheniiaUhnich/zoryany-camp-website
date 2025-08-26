@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 // Media query for 1440px
 @mixin desktop {
@@ -17,7 +17,8 @@
 // Media query for 375px - For very small devices, we can adjust styles if needed
 // Often, the mobile-first styles from 768px down will work, but we can add specific overrides.
 @mixin mobile {
-  @media (max-width: 480px) { // A bit more general than 375px
+  @media (max-width: 480px) {
+    // A bit more general than 375px
     @content;
   }
-} 
+}

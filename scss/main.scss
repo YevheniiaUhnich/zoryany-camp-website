@@ -1,193 +1,195 @@
-@import 'variables';
-@import 'mixins';
-@import 'base';
-@import 'layout';
-@import 'hero';
+@import "variables";
+@import "mixins";
+@import "base";
+@import "layout";
+@import "hero";
 
 // Секція розподілення дітей по загонах
 .squad-meeting-container {
-    padding: 80px 0;
+  padding: 80px 0;
+  background: none;
+  background-color: #fff;
+
+  .squad-meeting-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  .squad-distribution,
+  .parents-meeting {
     background: none;
-    background-color: #fff;
-    
+    box-shadow: none;
+    border-radius: 0;
+    color: #333;
+  }
+
+  .squad-distribution {
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+    .squad-content {
+      p {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 15px;
+        text-align: justify;
+        color: #34495e;
+      }
+
+      .parents-notice {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 12px;
+        padding: 20px;
+        margin-top: 20px;
+        border: 2px solid rgba(74, 144, 226, 0.3);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+        h3 {
+          color: #e74c3c;
+          font-size: 1.3rem;
+          margin-bottom: 10px;
+          text-align: center;
+          font-weight: 700;
+        }
+
+        p {
+          margin-bottom: 0;
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #2c3e50;
+        }
+      }
+    }
+  }
+
+  .parents-meeting {
+    .meeting-content {
+      .meeting-rules {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 20px;
+
+        li {
+          background: rgba(255, 255, 255, 0.9);
+          border-radius: 10px;
+          padding: 15px;
+          margin-bottom: 12px;
+          font-size: 0.95rem;
+          line-height: 1.6;
+          color: #2c3e50;
+          border-left: 3px solid #e74c3c;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+          strong {
+            color: #e74c3c;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .important-notice {
+        background: rgba(231, 76, 60, 0.1);
+        border: 2px solid #e74c3c;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 20px 0;
+        text-align: center;
+
+        h3 {
+          color: #e74c3c;
+          font-size: 1.3rem;
+          margin-bottom: 10px;
+          font-weight: 700;
+        }
+
+        p {
+          font-size: 1.1rem;
+          line-height: 1.5;
+          color: #2c3e50;
+          font-weight: 600;
+          margin: 0;
+        }
+      }
+
+      .contact-info {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        border: 2px solid rgba(74, 144, 226, 0.3);
+
+        p {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #2c3e50;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+
     .squad-meeting-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        align-items: start;
+      grid-template-columns: 1fr;
+      gap: 30px;
     }
-    
-    .squad-distribution, .parents-meeting {
-        background: none;
-        box-shadow: none;
-        border-radius: 0;
-        color: #333;
-    }
-    
-    .squad-distribution {
-        max-width: calc(100% - 40px);
-        margin: 0 auto;
-        .squad-content {
-            p {
-                font-size: 1rem;
-                line-height: 1.7;
-                margin-bottom: 15px;
-                text-align: justify;
-                color: #34495e;
-            }
-            
-            .parents-notice {
-                background: rgba(255,255,255,0.8);
-                border-radius: 12px;
-                padding: 20px;
-                margin-top: 20px;
-                border: 2px solid rgba(74,144,226,0.3);
-                backdrop-filter: blur(10px);
-                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-                
-                h3 {
-                    color: #e74c3c;
-                    font-size: 1.3rem;
-                    margin-bottom: 10px;
-                    text-align: center;
-                    font-weight: 700;
-                }
-                
-                p {
-                    margin-bottom: 0;
-                    font-size: 1rem;
-                    line-height: 1.6;
-                    color: #2c3e50;
-                }
-            }
-        }
-    }
-    
+
+    .squad-distribution,
     .parents-meeting {
-        .meeting-content {
-            .meeting-rules {
-                list-style: none;
-                padding: 0;
-                margin-bottom: 20px;
-                
-                li {
-                    background: rgba(255,255,255,0.9);
-                    border-radius: 10px;
-                    padding: 15px;
-                    margin-bottom: 12px;
-                    font-size: 0.95rem;
-                    line-height: 1.6;
-                    color: #2c3e50;
-                    border-left: 3px solid #e74c3c;
-                    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-                    
-                    strong {
-                        color: #e74c3c;
-                        font-weight: 700;
-                    }
-                }
-            }
-            
-            .important-notice {
-                background: rgba(231, 76, 60, 0.1);
-                border: 2px solid #e74c3c;
-                border-radius: 12px;
-                padding: 20px;
-                margin: 20px 0;
-                text-align: center;
-                
-                h3 {
-                    color: #e74c3c;
-                    font-size: 1.3rem;
-                    margin-bottom: 10px;
-                    font-weight: 700;
-                }
-                
-                p {
-                    font-size: 1.1rem;
-                    line-height: 1.5;
-                    color: #2c3e50;
-                    font-weight: 600;
-                    margin: 0;
-                }
-            }
-            
-            .contact-info {
-                background: rgba(255,255,255,0.8);
-                border-radius: 10px;
-                padding: 20px;
-                text-align: center;
-                border: 2px solid rgba(74,144,226,0.3);
-                
-                p {
-                    font-size: 1rem;
-                    line-height: 1.6;
-                    color: #2c3e50;
-                    margin: 0;
-                }
-            }
-        }
+      h2 {
+        font-size: 1.8rem;
+      }
     }
-    
-    @media (max-width: 768px) {
-        padding: 60px 0;
-        
-        .squad-meeting-grid {
-            grid-template-columns: 1fr;
-            gap: 30px;
+
+    .squad-distribution .squad-content {
+      p {
+        font-size: 0.95rem;
+      }
+
+      .parents-notice {
+        padding: 15px;
+
+        h3 {
+          font-size: 1.2rem;
         }
-        
-        .squad-distribution, .parents-meeting {
-            h2 {
-                font-size: 1.8rem;
-            }
+
+        p {
+          font-size: 0.95rem;
         }
-        
-        .squad-distribution .squad-content {
-            p {
-                font-size: 0.95rem;
-            }
-            
-            .parents-notice {
-                padding: 15px;
-                
-                h3 {
-                    font-size: 1.2rem;
-                }
-                
-                p {
-                    font-size: 0.95rem;
-                }
-            }
-        }
-        
-        .parents-meeting .meeting-content {
-            .meeting-rules li {
-                font-size: 0.9rem;
-                padding: 12px;
-            }
-            
-            .important-notice {
-                padding: 15px;
-                
-                h3 {
-                    font-size: 1.2rem;
-                }
-                
-                p {
-                    font-size: 1rem;
-                }
-            }
-            
-            .contact-info {
-                padding: 15px;
-                
-                p {
-                    font-size: 0.95rem;
-                }
-            }
-        }
+      }
     }
+
+    .parents-meeting .meeting-content {
+      .meeting-rules li {
+        font-size: 0.9rem;
+        padding: 12px;
+      }
+
+      .important-notice {
+        padding: 15px;
+
+        h3 {
+          font-size: 1.2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+
+      .contact-info {
+        padding: 15px;
+
+        p {
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
 }
 
 // Галерея-слайдер Життя в таборі
@@ -201,7 +203,7 @@
 
   .gallery-slider-track {
     display: flex;
-    transition: transform 0.5s cubic-bezier(0.77,0,0.18,1);
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.18, 1);
     will-change: transform;
     gap: 24px;
   }
@@ -213,7 +215,7 @@
     height: 800px;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 4px 18px rgba(74,144,226,0.13);
+    box-shadow: 0 4px 18px rgba(74, 144, 226, 0.13);
     background: #fff;
     display: flex;
     align-items: center;
@@ -239,8 +241,8 @@
   }
   .gallery-slider-arrow {
     background: #fff;
-    border: 2px solid #4A90E2;
-    color: #4A90E2;
+    border: 2px solid #4a90e2;
+    color: #4a90e2;
     border-radius: 50%;
     width: 48px;
     height: 48px;
@@ -249,13 +251,14 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(74,144,226,0.10);
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.1);
     transition: background 0.2s, color 0.2s, border 0.2s;
   }
-  .gallery-slider-arrow:hover, .gallery-slider-arrow:focus {
-    background: #4A90E2;
+  .gallery-slider-arrow:hover,
+  .gallery-slider-arrow:focus {
+    background: #4a90e2;
     color: #fff;
-    border-color: #FDB8C0;
+    border-color: #fdb8c0;
   }
 
   @media (max-width: 2000px) {
@@ -304,7 +307,10 @@
 // Lightbox для галереї
 .gallery-lightbox-overlay {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(30, 30, 40, 0.85);
@@ -325,20 +331,26 @@
   max-width: 90vw;
   max-height: 90vh;
   border-radius: 18px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
   animation: gallery-zoom-in 0.3s;
   background: #fff;
 }
 @keyframes gallery-zoom-in {
-  from { transform: scale(0.7); opacity: 0.3; }
-  to   { transform: scale(1); opacity: 1; }
+  from {
+    transform: scale(0.7);
+    opacity: 0.3;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
-// Секція збираємо валізу 
+// Секція збираємо валізу
 .partners-title {
-  font-family: 'Savate', sans-serif;
+  font-family: "Savate", sans-serif;
   font-size: 1.5rem;
-  color: #4A90E2;
+  color: #4a90e2;
   font-weight: 700;
   margin-bottom: 20px;
   text-align: left;
@@ -358,8 +370,8 @@
 }
 
 .warning-box {
-  border: 2px solid #FDB8C0;
-  background: #FFF6F8;
+  border: 2px solid #fdb8c0;
+  background: #fff6f8;
   border-radius: 14px;
   padding: 18px 24px;
   margin-top: 18px;
@@ -396,8 +408,8 @@
   top: 50%;
   transform: translateY(-50%);
   background: #fff;
-  border: 2px solid #4A90E2;
-  color: #4A90E2;
+  border: 2px solid #4a90e2;
+  color: #4a90e2;
   border-radius: 50%;
   width: 44px;
   height: 44px;
@@ -416,10 +428,11 @@
 .counselor-slider-arrow.right {
   right: 10px;
 }
-.counselor-slider-arrow:hover, .counselor-slider-arrow:focus {
-  background: #4A90E2;
+.counselor-slider-arrow:hover,
+.counselor-slider-arrow:focus {
+  background: #4a90e2;
   color: #fff;
-  border-color: #FDB8C0;
+  border-color: #fdb8c0;
 }
 
 .counselor-school .vertical-gallery img {
@@ -442,7 +455,7 @@
   margin-top: 40px;
   margin-bottom: 10px;
   font-size: 1.3rem;
-  color: #4A90E2;
+  color: #4a90e2;
   font-weight: 700;
   text-align: center;
 }
@@ -453,7 +466,7 @@
   margin: 0 auto 30px auto;
   border-radius: 16px;
   background: #f7fbff;
-  box-shadow: 0 4px 24px rgba(74,144,226,0.08);
+  box-shadow: 0 4px 24px rgba(74, 144, 226, 0.08);
   overflow: hidden;
 }
 .accordion-item + .accordion-item {
@@ -466,10 +479,10 @@
   outline: none;
   text-align: left;
   padding: 22px 28px;
-  font-family: 'Comfortaa', 'Nunito', sans-serif;
+  font-family: "Comfortaa", "Nunito", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
-  color: #4A90E2;
+  color: #4a90e2;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -493,8 +506,14 @@
   animation: accordion-fade-in 0.3s;
 }
 @keyframes accordion-fade-in {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @media (max-width: 600px) {
   .accordion-header {
@@ -506,4 +525,4 @@
     padding: 0 14px 16px 36px;
     font-size: 0.98rem;
   }
-} 
+}

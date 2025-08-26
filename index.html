@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="uk">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Дитячий табір "Зоряний"</title>
-    <link rel="stylesheet" href="css/main.css?v=1.0.2">
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/main.css?v=1.0.2" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito:wght@400;600&family=Pacifico&family=Merriweather:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Nunito:wght@400;600&family=Pacifico&family=Merriweather:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- JavaScript modules -->
     <!-- <script src="js/weather.js"></script> -->
@@ -26,765 +32,1183 @@
     <!-- <script src="js/toggle-pink-btn.js"></script> -->
     <!-- <script src="js/accordion.js"></script> -->
     <!-- Замість зовнішніх wixstatic.com картинок використовуйте локальні зображення у папці images/ -->
-</head>
+  </head>
 
-<body>
-
-<canvas id="bubbles-canvas"></canvas>
+  <body>
+    <canvas id="bubbles-canvas"></canvas>
 
     <header class="header">
-        <div class="container">
-            <a href="#" class="logo">Зоряний</a>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#about">Про табір</a></li>
-                    <li><a href="#features">Переваги</a></li>
-                    <li><a href="#shifts-prices">Зміни та ціни</a></li>
-                    <li><a href="#gallery">Галерея</a></li>
-                    <li><a href="#contact">Контакти</a></li>
-                    <li><a href="#partners">Наші партнери</a></li>
-                    <li><a href="#counselor-school">Школа вожатого</a></li>
-                </ul>
-            </nav>
-            <button class="button buy-button-header">Придбати путівку</button>
-        </div>
+      <div class="container">
+        <a href="#" class="logo">Зоряний</a>
+        <nav class="nav">
+          <ul>
+            <li><a href="#about">Про табір</a></li>
+            <li><a href="#features">Переваги</a></li>
+            <li><a href="#shifts-prices">Зміни та ціни</a></li>
+            <li><a href="#gallery">Галерея</a></li>
+            <li><a href="#contact">Контакти</a></li>
+            <li><a href="#partners">Наші партнери</a></li>
+            <li><a href="#counselor-school">Школа вожатого</a></li>
+          </ul>
+        </nav>
+        <button class="button buy-button-header">Придбати путівку</button>
+      </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="container">
-                <img src="images/111.jpg" alt="Zoryany Camp" class="hero-image">
-                <div class="hero-row">
-                    <div class="weather-widget"></div>
-                    <p class="official-title">
-                        Комунальне некомерційне підприємство<br>
-                        «Дитячий заклад оздоровлення та відпочинку "ЗОРЯНИЙ"»<br>
-                        Кременчуцької міської ради Кременчуцького району Полтавської області
-                    </p>
-                    <div class="calendar-widget"></div>
-                </div>
-                <p class="hero-subtitle">Комфортабельний та якісний відпочинок на березі річки Псел.</p>
-                <div class="hero-buttons">
-                    <button class="button buy-button-hero">Придбати путівку одним дотиком</button>
-                    
-                    <button class="button book-button-hero" id="bookingButton">Бронювання путівки</button>
-                </div>
-            </div>
-        </section>
+      <section class="hero">
+        <div class="container">
+          <img src="images/111.jpg" alt="Zoryany Camp" class="hero-image" />
+          <div class="hero-row">
+            <div class="weather-widget"></div>
+            <p class="official-title">
+              Комунальне некомерційне підприємство<br />
+              «Дитячий заклад оздоровлення та відпочинку "ЗОРЯНИЙ"»<br />
+              Кременчуцької міської ради Кременчуцького району Полтавської
+              області
+            </p>
+            <div class="calendar-widget"></div>
+          </div>
+          <p class="hero-subtitle">
+            Комфортабельний та якісний відпочинок на березі річки Псел.
+          </p>
+          <div class="hero-buttons">
+            <button class="button buy-button-hero">
+              Придбати путівку одним дотиком
+            </button>
 
-        <section class="about" id="about">
-            <div class="container">
-                <h2 class="partners-title center-large-title">Про наш табір</h2>
-                <div class="about-content">
-                    <div class="about-slider">
-                        <button class="about-slider-arrow left" aria-label="Попереднє фото">&#8592;</button>
-                        <div class="about-slider-main">
-                            <img src="images/slider/1.png" alt="Головне фото табору" class="about-slider-main-img">
-                        </div>
-                        <button class="about-slider-arrow right" aria-label="Наступне фото">&#8594;</button>
-                    </div>
-                    <div class="about-text">
-                        <p>"Заклад розташований в екологічно чистому місці. Сьогодні на його території, площею 9
-                            гектарів, знаходяться стаціонарні спальні корпуси, де можуть розміститися 384 дітей в одну
-                            зміну.
-                            До послуг вихованців збалансоване 6-разове харчування (з можливістю дієтичного) за
-                            рецептурою відомого кулінара Євгена Клопотенка, кіно-концертна зала, бібліотека, кімнати для
-                            гурткової роботи (прикладного, вокального, хореографічного мистецтв, студії медіа-культури,
-                            студії етики та краси, школи телеведучого), спортивні секції, різноманітні майстер-класи,
-                            огороджений та облаштований пляж, альтанки, ігрові майданчики, майданчик вуличних
-                            тренажерів, туристичне містечко, стадіон, спортивні майданчики (футбол, міні-футбол - 2 шт.,
-                            пляжний волейбол, волейбол, для легкої атлетики, баскетбол, артбол, бадмінтон ін.), вуличні
-                            тренажери, тренажерна зала, стежинка здоров'я, прийом фіточаїів.
-                            Творчий педагогічний колектив однодумців зробить усе можливе, щоб час, проведений Вашими
-                            дітьми разом з нами, надовго залишив яскравий слід у юних серцях та приємні спогади про
-                            нових друзів!
-                            Наша команда — це серце табору. З кожним загоном працює досвідчений вихователь та двоє
-                            енергійних вожатих (а в молодших загонах — троє!). Професійний психолог, методист,
-                            педагог-організатор та старший вихователь дбають про насичену, цікаву та безпечну програму
-                            відпочинку.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="features" class="features">
-            <div class="container">
-                <h2 class="partners-title center-large-title">Чому обирають "Зоряний"?</h2>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <i class="fa-solid fa-clipboard-list feature-icon"></i>
-                        <h3>Дисципліна та графік</h3>
-                        <p>Чіткий розпорядок дня, що привчає до самостійності та відповідальності.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fa-solid fa-briefcase-medical feature-icon"></i>
-                        <h3>Безпека та мед. супровід</h3>
-                        <p>Цілодобовий медичний пункт та кваліфікований персонал для безпеки ваших дітей.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fa-solid fa-futbol feature-icon"></i>
-                        <h3>Спортивні заходи</h3>
-                        <p>Щоденні змагання, естафети та активні ігри на свіжому повітрі.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fa-solid fa-masks-theater feature-icon"></i>
-                        <h3>Культурна програма</h3>
-                        <p>Тематичні дні, концерти, фестивалі талантів та творчі вечори.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fa-solid fa-palette feature-icon"></i>
-                        <h3>Розвиваємо у творчості</h3>
-                        <p>Величезний вибір гуртків, майстер-класів та творчих проєктів для кожної дитини.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fa-solid fa-record-vinyl feature-icon"></i>
-                        <h3>Вечірні дискотеки</h3>
-                        <p>Запальні танці під улюbлені хіти щовечора.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fa-solid fa-water-ladder feature-icon"></i>
-                        <h3>Купання в річці</h3>
-                        <p>Освіжаюче купання у чистій річці Псел під наглядом інструкторів.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fa-solid fa-utensils feature-icon"></i>
-                        <h3>Шести разове харчування</h3>
-                        <p>Збалансоване, корисне та смачне меню. Готуємо смачно, як вдома!</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="parents-info" id="parents-info">
-            <div class="container">
-                <h2 class="partners-title center-large-title">Важливе для батьків</h2>
-                <div class="accordion">
-                    <div class="accordion-item">
-                        <button class="accordion-header" type="button" aria-expanded="false"
-                            aria-controls="accordion-content-1" id="accordion-header-1">
-                            <i class="fa-solid fa-file-signature"></i>Оформлення путівки
-                            <span class="accordion-detail-btn"><i class="fa-solid fa-chevron-down"></i></span>
-                        </button>
-                        <div class="accordion-content" id="accordion-content-1" hidden>
-                            <div class="accordion-info-box">
-                                <p><strong>Шановні батьки!</strong><br>
-                                    Пропонуємо ознайомитися з варіантами придбання путівки на оздоровчий сезон. Ви
-                                    можете отримати її одним із наступних способів:</p>
-                                <ol>
-                                    <li><strong>100% оплата вартості путівки.</strong><br>
-                                        Звертайтеся безпосередньо до секретаря підприємства. Контактні дані – у розділі
-                                        "Контакти".</li>
-                                    <li><strong>Через профспілковий комітет.</strong><br>
-                                        Зверніться до координатора з оздоровлення профспілки на вашому підприємстві.
-                                        Після цього координатор зв'язується з нами, і ми укладаємо договір безпосередньо
-                                        з вашим підприємством.</li>
-                                    <li><strong>Для тимчасово непрацевлаштованих.</strong><br>
-                                        Скористайтеся обласною Програмою часткового відшкодування вартості путівки для
-                                        дітей Полтавської області. Зверніться до органів міської, сільської або районної
-                                        ради для внесення дитини до банку оздоровлення.<br>
-                                        Наприклад, жителі Кременчуцької територіальної громади подають документи до
-                                        ЦНАП. Після підтвердження можливості відшкодування зверніться до секретаря
-                                        підприємства для подальших дій.</li>
-                                    <li><strong>Для соціальних категорій.</strong><br>
-                                        Якщо дитина належить до пільгових категорій (багатодітна родина, сирота, дитина
-                                        учасників бойових дій/АТО, відмінник, призер конкурсів), зверніться до органів
-                                        місцевої влади.<br>
-                                        У Кременчуці це — Департамент у справах сімей та дітей Кременчуцької міської
-                                        ради. Там вас проконсультують щодо подальших дій.</li>
-                                </ol>
-                                <p>Обирайте зручний варіант та дійте!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header" type="button" aria-expanded="false"
-                            aria-controls="accordion-content-2" id="accordion-header-2">
-                            <i class="fa-solid fa-file-signature"></i>Оформлення документів
-                            <span class="accordion-detail-btn"><i class="fa-solid fa-chevron-down"></i></span>
-                        </button>
-                        <div class="accordion-content" id="accordion-content-2" hidden>
-                            <div class="accordion-info-box">
-                                <strong>НЕОБХІДНІ ДОКУМЕНТИ</strong><br>
-                                Для оформлення дитини у КНП "ДЗОВ "Зоряний":<br>
-                                1. Копія свідоцтва про народження дитини.<br>
-                                2. Путівка ДЗОВ "ЗОРЯНИЙ".<br>
-                                3. Медична довідка про стан здоров'я дитини (Форма 079/о).<br>
-                                4. Завірена ксерокопія картки профілактичних щеплень (Форма 063/о).
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header" type="button" aria-expanded="false"
-                            aria-controls="accordion-content-3" id="accordion-header-3">
-                            <i class="fa-solid fa-list-check"></i>Основні правила прийому дітей у табір
-                            <span class="accordion-detail-btn"><i class="fa-solid fa-chevron-down"></i></span>
-                        </button>
-                        <div class="accordion-content" id="accordion-content-3" hidden>
-                            <div class="accordion-info-box">
-                                <h3>Шановні батьки!</h3>
-                                <p>Ваші діти вирушають у дитячий заклад оздоровлення та відпочинку на літній відпочинок.
-                                    Щоб літо пройшло добре, і діти повернулися додому задоволеними та здоровими,
-                                    потрібно пам'ятати ряд правил і умов.<br>
-                                    У ДЗОВ "ЗОРЯНИЙ" приймаються здорові діти або діти, що мають хронічні захворювання
-                                    поза загостреннями, що не вимагають санаторно-курортного лікування і мають
-                                    відповідний дозвіл лікаря.<br>
-                                    Діти, що мають хронічні захворювання у стадії загострення, що страждають частими
-                                    нападами (судоми, астматичні напади і т.ін.), вимагають підтримуючу терапію до
-                                    оздоровчого закладу не приймаються.<br>
-                                    Такі діти підлягають санаторному лікуванню.<br>
-                                    До нашого закладу приймаються діти віком від 7 до 17 років.<br>
-                                    Усі діти застраховані.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header" type="button" aria-expanded="false"
-                            aria-controls="accordion-content-4" id="accordion-header-4">
-                            <i class="fa-solid fa-suitcase-rolling"></i>Збираємо валізу
-                            <span class="accordion-detail-btn"><i class="fa-solid fa-chevron-down"></i></span>
-                        </button>
-                        <div class="accordion-content" id="accordion-content-4" hidden>
-                            <div class="accordion-info-box">
-                                <ul>
-                                    <li>Головний убір</li>
-                                    <li>Святковий одяг</li>
-                                    <li>Рушники</li>
-                                    <li>Носові хустинки</li>
-                                    <li>Нижня білизна</li>
-                                    <li>Шкарпетки</li>
-                                    <li>Теплий та повсякденний одяг</li>
-                                    <li>Спортивний одяг</li>
-                                    <li>Взуття</li>
-                                    <li>Засоби особистої гігієни</li>
-                                    <li>2-3 улюbлені книги</li>
-                                    <li>Музичні інструменти (за бажанням)</li>
-                                </ul>
-                                <p><em>Рекомендуємо не брати зайвих речей — усе має поміститися в одну валізу або сумку,
-                                        яку дитина зможе нести самостійно.</em></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header" type="button" aria-expanded="false"
-                            aria-controls="accordion-content-5" id="accordion-header-5">
-                            <i class="fa-solid fa-ban"></i>Заборонені речі
-                            <span class="accordion-detail-btn"><i class="fa-solid fa-chevron-down"></i></span>
-                        </button>
-                        <div class="accordion-content" id="accordion-content-5" hidden>
-                            <div class="accordion-info-box">
-                                <ul>
-                                    <li> наркотичні та токсичні речовини;</li>
-                                    <li> алкогольні напої, у тому числі слабоалкогольні енергетики;</li>
-                                    <li> тютюнові вироби;</li>
-                                    <li> піротехнічні засоби, легкозаймисті речовини, сірники, запальнички;</li>
-                                    <li> зброю;</li>
-                                    <li> домашніх тварин.</li>
-                                </ul>
-                            </div>
-                            <div class="warning-box">
-                                <p><strong>У разі виявлення у дитини вищеперелічених предметів вона буде достроково
-                                        відрахована з табору без відшкодування вартості путівки.</strong></p>
-                                <p><strong>Якщо ж у дитини будуть виявлені наркотичні речовини, справа буде передана у
-                                        поліцію.</strong></p>
-                                <p><strong>Працівники КНП "ДЗОВ "ЗОРЯНИЙ" не несуть відповідальність за псування,
-                                        зникнення або крадіжку дитячих речей, предметів і грошей, не зданих на
-                                        зберігання.</strong></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header" type="button" aria-expanded="false"
-                            aria-controls="accordion-content-6" id="accordion-header-6">
-                            <i class="fa-solid fa-people-group"></i>Розподіл по загонах
-                            <span class="accordion-detail-btn"><i class="fa-solid fa-chevron-down"></i></span>
-                        </button>
-                        <div class="accordion-content" id="accordion-content-6" hidden>
-                            <div class="accordion-info-box">
-                                <p>Розподіл у загони відбувається на території закладу згідно віку дітей. Побажання
-                                    батьків при розподілі дітей у загони враховуються по можливості.</p>
-                                <p>Ми не рекомендуємо орієнтувати Ваших дітей на перебування в одному загоні у разі,
-                                    якщо різниця у віці між ними перевищує 2-3 роки. Якщо такі діти потраплять у загін
-                                    за віком старшої дитини, молодшому буде складно адаптуватися в загоні, якщо за віком
-                                    молодшого - старшому буде нудно.</p>
-                                <p>Адміністрація закладу залишає за собою право в день заїзду переводити дітей в інший
-                                    загін без їх узгодження.</p>
-                                <p>Слід попередити старшого вихователя, якщо за певними причинами дитина не прибула до
-                                    закладу у перший день зміни, щоб зарезервувати місце у загоні згідно віку дитини.
-                                </p>
-                                <p>Якщо Ви привозите свою дитину в табір уже після формування загонів, адміністрація
-                                    ДЗОВ визначить Вашу дитину у той загін, який максимально відповідає його віку, в
-                                    якому буде вільне місце.</p>
-                            </div>
-                            <div class="parents-notice notice-green">
-                                <h3>Шановні батьки!</h3>
-                                <p>У перший день вихователь або вожатий загону, у якому перебуває Ваша дитина,
-                                    обов'язково зателефонує Вам. Усі запитання, які будуть хвилювати Вас у той момент,
-                                    зможете озвучити педагогам закладу.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header" type="button" aria-expanded="false"
-                            aria-controls="accordion-content-7" id="accordion-header-7">
-                            <i class="fa-solid fa-calendar-check"></i>Виїзд та повернення
-                            <span class="accordion-detail-btn"><i class="fa-solid fa-chevron-down"></i></span>
-                        </button>
-                        <div class="accordion-content" id="accordion-content-7" hidden>
-                            <div class="accordion-info-box">
-                                <h3>Відправлення дітей до табору</h3>
-                                <ol>
-                                    <li>Реєстрація та від'їзд дітей проводиться у перший день табірної зміни, вказаної у
-                                        путівці за адресою: площа Перемоги, 2 (біля входу до парку "Придніпровський").
-                                    </li>
-                                    <li>Реєстрація розпочинається о 8.00 ранку. При реєстрації спочатку необхідно пройти
-                                        огляд у лікаря табору. Лікар має право відмовити дитині в прийомі у заклад за
-                                        наявності певних проблем із здоров'ям, відсутності медичних документів або їх
-                                        неправильному оформленні.</li>
-                                    <li>Після цього треба зареєструвати дитину у вихователів закладу. Якщо не встигли
-                                        зареєструвати і передати дитину вихователям закладу вчасно, Ви повинні
-                                        звернутися до адміністрації ДЗОВ "ЗОРЯНИЙ".</li>
-                                </ol>
-                                <p>Не варто в день відправлення годувати дитині занадто щільним сніданком, особливо якщо
-                                    його вколисує.<br>
-                                    Не слід дозволяти дітям їсти чіпси, сухарі і тому подібне, пити надто багато рідини.
-                                </p>
-                                <hr>
-                                <h3>Зустріч дітей батьками</h3>
-                            </div>
-                            <div class="departure-warning">
-                                <strong>УВАГА!</strong><br>
-                                На посадці формуються тільки групи дітей для здійснення трансферу їх у табір, а не
-                                загони.
-                            </div>
-                            <div class="accordion-info-box">
-                                <div class="meeting-content">
-                                    <ul class="meeting-rules">
-                                        <li>По приїзду в табір, звертайтеся до охорони на КПП з проханням покликати вашу
-                                            дитину. Повідомите їм її прізвище, ім'я, номер загону. Якщо номер загону
-                                            невідомий, то Вам обов'язково допоможуть (список дітей є на КПП, або
-                                            звертайтеся адміністрації табору).</li>
-                                        <li>Відповідно до "Санітарних правил і норм України", "Типового положення про
-                                            дитячі оздоровчі табори України", а також "Правилами внутрішнього розпорядку
-                                            ДЗОВ "Зоряний", пересування батьків територією табору, відвідування спальних
-                                            корпусів і інших приміщень <strong>КАТЕГОРИЧНО ЗАБОРОНЕНЕ</strong>.</li>
-                                        <li>Батькам заборонено привозити дітям, <strong>УСЕ те, що перераховано
-                                                ВИЩЕ</strong></li>
-                                        <li>Діти не ввідаються батькам, іншим особам, які знаходяться у нетверезому
-                                            стані або під дією наркотичних, токсичних речовин.</li>
-                                    </ul>
-                                    <div class="important-notice">
-                                        <h3>Памʼятайте:</h3>
-                                        <p>Часте провідування дитини відволікає її від табірної програми і заважає її
-                                            адаптації!</p>
-                                    </div>
-                                    <div class="contact-info">
-                                        <p>На усі питання, що цікавлять Вас, про життя дітей у таборі у повному обсязі
-                                            нададуть відповідь загонові педагоги, психолог і представники адміністрації.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header" type="button" aria-expanded="false"
-                            aria-controls="accordion-content-8" id="accordion-header-8">
-                            <i class="fa-solid fa-people-roof"></i>Дитина їде до табору вперше!
-                            <span class="accordion-detail-btn"><i class="fa-solid fa-chevron-down"></i></span>
-                        </button>
-                        <div class="accordion-content" id="accordion-content-8" hidden>
-                            <div class="accordion-info-box">
-                                <p><strong>Що робити, якщо дитина у табір їде вперше?</strong></p>
-                                <p>Адаптація дітей до нових для них умов тимчасового дитячого колективу - це складний і
-                                    клопіткий психолого-педагогічний процес, пов'язаний з необхідністю використання
-                                    кожною дитиною (а тим більше, новачком) усіх умінь і навичок самостійності,
-                                    концентрації усіх його особових якостей і рис характеру.</p>
-                                <p>Тому, <strong>БАТЬКИ</strong>, намагайтеся не турбувати дитину телефонними дзвінками,
-                                    а тим більше відвідуваннями, під час періоду адаптації: перші 3-4 дні. Цілком
-                                    нормальний стан, коли дитина скучає за мамою і татом, а Ваш приїзд може викликати у
-                                    нього бажання поїхати додому.</p>
-                                <p>Багато хто з батьків одного разу замислюється: "А чи не відправити дитину на літо в
-                                    табір? Там спілкування і розваги, відпочинок і розвиток, та і навички самостійності
-                                    дитина отримає, нарешті!"</p>
-                                <p>Насправді, все не так просто. Самостійність не з'явиться за лічені дні, як загар. Ця
-                                    якість - результат багаторічного виховання, плід батьківської праці. І якщо ви
-                                    можете з упевненістю сказати про свою дитину, що вона самостійна - в таборі йому,
-                                    швидше за все, буде легко. Інакше, поїздка в табір може стати справжнім
-                                    випробуванням і для дитини, і для батьків, які вдома не знаходять собі місця.</p>
-                            </div>
-                            <div class="parents-notice notice-green">
-                                <h3><span class="parents-notice-title">Нагадування!</span></h3>
-                                <p>У таборі діти отримують 6-разове збалансоване харчування. Дорога до табору триває
-                                    30-40 хвилин. Тому не потрібно давати дитині зайву їжу — у нас їй буде комфортно та
-                                    смачно!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header" type="button" aria-expanded="false"
-                            aria-controls="accordion-content-9" id="accordion-header-9">
-                            <i class="fa-solid fa-chalkboard-user"></i>Правила перебування у таборі
-                            <span class="accordion-detail-btn"><i class="fa-solid fa-chevron-down"></i></span>
-                        </button>
-                        <div class="accordion-content" id="accordion-content-9" hidden>
-                            <div class="accordion-info-box">
-                                <p><strong>Правила перебування у таборі</strong></p>
-                                <p>У нашому таборі встановлений режим дня, який передбачає активну участь дитини у
-                                    різний видах діяльності.</p>
-                                <p>Прищеплюючи дитині навички самостійності, ми залучаємо її до елементарної праці, що
-                                    включає прибирання свого спального місця, утримання в порядку особистих речей,
-                                    дотримання норм особистої гігієни, чергування в кімнаті, їдальні, підтримка в
-                                    порядку закріпленої території.</p>
-                                <p>Адміністрація закладу переконливо просить вас, шановані батьки, провести зі своїми
-                                    дітьми бесіду про необхідність дбайливого відношення до матеріальних цінностей
-                                    табору і налаштувати на те, що дитина мешкатиме в умовах нового колективу зі
-                                    встановленими правилами і режимом дня.</p>
-                                <p>У разі навмисного нанесення дитиною збитків майну підприємства, батьки або
-                                    організація, що направила її в табір, несуть майнову відповідальність у розмірі
-                                    заподіяного збитку.</p>
-                                <p><strong>Особливу увагу просимо приділити питанням дотримання правил особистої гігієни
-                                        дитиною, а саме:</strong></p>
-                                <ul>
-                                    <li>вмиватися і мити ноги перед сном;</li>
-                                    <li>спати, роздягшись до нижньої білизни, а не в спортивному костюмі, наприклад, або
-                                        навіть у взутті.</li>
-                                </ul>
-                                <p>Приїзд дитини в табір вважається згодою дитини і його батьків на виконання правил,
-                                    встановлених у КНП "ДЗОВ "ЗОРЯНИЙ".</p>
-                                <p>У таборі працюють компетентні, кваліфіковані і досвідчені вихователі та вожаті, яким
-                                    ви довіряєте своїх дітей. Але кожна дитина індивідуальна, іноді вихователеві/
-                                    вожатому нелегко порозумітися з ким-небудь з дітей, знайти підхід. Тому батьки
-                                    повинні, віддаючи дітей у заклад, повідомити педагога про індивідуальні
-                                    психологічні, поведінкові, фізіологічні особливості своєї дитини.</p>
-                                <p>Якщо у вашої дитини під час перебування в таборі виникають які-небудь проблеми, і він
-                                    соромиться звернутися до працівників табору, будь ласка, повідомте про ці проблеми
-                                    педагогів загону, щоб спільними зусиллями ми змогли врегулювати ситуацію.</p>
-                                <p>Свої взаємовідносини з дітьми і їх батьками співробітники табору будують на принципах
-                                    довіри, взаєморозуміння, толерантності і терпимості.</p>
-                                <p>Просимо і вас дотримуватися цих же принципів по відношенню до працівників КНП "ДЗОВ
-                                    "Зоряний".</p>
-                                <p><strong>Ми, співробітники КНП "ДЗОВ "ЗОРЯНИЙ", хочемо завірити вас, що зробимо все
-                                        можливе, щоб відпочинок у нас запам'ятався вашій дитині тільки з кращої сторони.
-                                        І побувавши тут одного разу, вона захотіла знову повернутися в наш
-                                        табір.</strong></p>
-                                <hr>
-                                <p><strong>КОРИСНІ ПОРАДИ БАТЬКАМ</strong></p>
-                                <ul>
-                                    <li>Дітям у віці 7-9 років бажано помітити речі індивідуальною міткою, а також
-                                        напишіть їм список зібраних речей і покладіть у сумку.</li>
-                                    <li>Не варто давати дитині надто багато речей. Бажано, щоб усі вони помістилися в
-                                        одну дорожну/спортивну сумку або валізу (нести речі від автобуса до спального
-                                        корпусу дитина буде самостійно).</li>
-                                    <li>Зауважте, що у дітей дорога до табору триватиме 30-40 хвилин, також їх чекає
-                                        6-разове харчування. Тому давати з собою їжу швидкого псування категорично
-                                        забороняється!</li>
-                                    <li>Дозволено мати при собі негазовану або слабогазовану воду, цукерки (карамельки,
-                                        льодяники), галетне печиво і тому подібне.</li>
-                                    <li>Продукти харчування швидкого псування, які ви дасте дитині, будуть знешкоджені в
-                                        день заїзду в табір.</li>
-                                    <li>Заборонені шкідливі продукти (чіпси, сухарики, шоколадні чи кремові вироби,
-                                        газовані солодкі напої, їжа швидкого приготування тощо) будуть зібрані та
-                                        передані вам при першій можливості.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <button class="accordion-header" type="button" aria-expanded="false"
-                            aria-controls="accordion-content-10" id="accordion-header-10">
-                            <i class="fa-solid fa-utensils"></i>Продукти харчування які можна/заборонено привозити до
-                            табору
-                            <span class="accordion-detail-btn"><i class="fa-solid fa-chevron-down"></i></span>
-                        </button>
-                        <div class="accordion-content" id="accordion-content-10" hidden>
-
-                            <div class="food-products-grid">
-                                <div class="food-allowed">
-                                    <div class="food-section-header">
-                                        <i class="fa-solid fa-check-circle"></i>
-                                        <h4>Дозволено привозити</h4>
-                                    </div>
-                                    <ul>
-                                        <li>Негазовану або слабогазовану воду</li>
-                                        <li>Цукерки (карамельки, льодяники)</li>
-                                        <li>Галетне печиво</li>
-                                        <li>Сухофрукти (родзинки, курага, чорнослив)</li>
-                                        <li>Горіхи (невелика кількість)</li>
-                                        <li>Соки в пакетах (невелика кількість)</li>
-                                    </ul>
-                                </div>
-                                <div class="food-forbidden">
-                                    <div class="food-section-header">
-                                        <i class="fa-solid fa-ban"></i>
-                                        <h4>Категорично заборонено</h4>
-                                    </div>
-                                    <ul>
-                                        <li>Продукти швидкого псування (молочні, м'ясні, рибні)</li>
-                                        <li>Варені яйця/ салати</li>
-                                        <li>Чіпси, сухарики, солоні закуски</li>
-                                        <li>Шоколадні чи кремові вироби</li>
-                                        <li>Газовані солодкі напої</li>
-                                        <li>Їжа швидкого приготування</li>
-                                        <li>Консерви</li>
-                                        <li>Солодощі з кремом або начинкою</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="warning-box">
-                                <p><strong>УВАГА!</strong></p>
-                                <p>Продукти харчування швидкого псування, які ви дасте дитині, будуть знешкоджені в день
-                                    заїзду в табір.</p>
-                                <p>Заборонені шкідливі продукти (чіпси, сухарики, шоколадні чи кремові вироби, газовані
-                                    солодкі напої, їжа швидкого приготування тощо) будуть зібрані та передані вам при
-                                    першій можливості.</p>
-                            </div>
-                            <div class="parents-notice notice-green">
-                                <h3><span class="parents-notice-title">Нагадування!</span></h3>
-                                <p>У таборі діти отримують 6-разове збалансоване харчування. Дорога до табору триває
-                                    30-40 хвилин. Тому не потрібно давати дитині зайву їжу - у нас їй буде комфортно та
-                                    смачно!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="shifts-prices" class="shifts-prices">
-            <div class="container">
-                <h2 class="partners-title center-large-title">Зміни та вартість — Літо 2026</h2>
-                <div class="shifts-prices-content">
-                    <div class="shifts-info">
-                        <h3>Зміни відпочинку</h3>
-                        <ul>
-                            <li><strong>І зміна:</strong> 01.06 - 21.06</li>
-                            <li><strong>ІІ зміна:</strong> 23.06 - 13.07</li>
-                            <li><strong>ІІІ зміна:</strong> 15.07 - 04.08</li>
-                            <li><strong>ІV зміна:</strong> 06.08 - 26.08</li>
-                        </ul>
-                    </div>
-                    <div class="prices-info">
-                        <h3>Вартість путівок</h3>
-                        <ul>
-                            <li><strong>І зміна:</strong> ****** грн. 00 коп.</li>
-                            <li><strong>ІІ зміна:</strong> ****** грн. 00 коп.</li>
-                            <li><strong>ІІІ зміна:</strong> ****** грн. 00 коп.</li>
-                            <li><strong>ІV зміна:</strong> ****** грн. 00 коп.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery" class="gallery">
-            <div class="container">
-                <h2 class="partners-title center-large-title">Фотогалерея "Життя в Зоряному"</h2>
-                <div class="gallery-slider">
-                    <div class="gallery-slider-track">
-                        <div class="gallery-slide"><img src="images/gallery/1.jpg" alt="Життя в таборі 1"></div>
-                        <div class="gallery-slide"><img src="images/gallery/2.jpg" alt="Життя в таборі 2"></div>
-                        <div class="gallery-slide"><img src="images/gallery/3.jpg" alt="Життя в таборі 3"></div>
-                        <div class="gallery-slide"><img src="images/gallery/4.jpg" alt="Життя в таборі 4"></div>
-                        <div class="gallery-slide"><img src="images/gallery/5.jpg" alt="Життя в таборі 5"></div>
-                        <div class="gallery-slide"><img src="images/gallery/6.jpg" alt="Життя в таборі 6"></div>
-                        <div class="gallery-slide"><img src="images/gallery/7.jpg" alt="Життя в таборі 7"></div>
-                        <div class="gallery-slide"><img src="images/gallery/8.jpg" alt="Життя в таборі 8"></div>
-                        <div class="gallery-slide"><img src="images/gallery/9.jpg" alt="Життя в таборі 9"></div>
-                        <div class="gallery-slide"><img src="images/gallery/10.jpg" alt="Життя в таборі 10"></div>
-                        <div class="gallery-slide"><img src="images/gallery/11.jpg" alt="Життя в таборі 11"></div>
-                        <div class="gallery-slide"><img src="images/gallery/12.jpg" alt="Життя в таборі 12"></div>
-                        <div class="gallery-slide"><img src="images/gallery/13.jpg" alt="Життя в таборі 13"></div>
-                        <div class="gallery-slide"><img src="images/gallery/14.jpg" alt="Життя в таборі 14"></div>
-                        <div class="gallery-slide"><img src="images/gallery/15.jpg" alt="Життя в таборі 15"></div>
-                        <div class="gallery-slide"><img src="images/gallery/16.jpg" alt="Життя в таборі 16"></div>
-                        <div class="gallery-slide"><img src="images/gallery/17.jpg" alt="Життя в таборі 17"></div>
-                    </div>
-                    <div class="gallery-slider-arrows">
-                        <button class="gallery-slider-arrow left" aria-label="Попереднє фото">&#8592;</button>
-                        <button class="gallery-slider-arrow right" aria-label="Наступне фото">&#8594;</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="gallery-lightbox-overlay" id="galleryLightbox">
-            <img class="gallery-lightbox-img" id="galleryLightboxImg" src="" alt="Збільшене фото">
+            <button class="button book-button-hero" id="bookingButton">
+              Бронювання путівки
+            </button>
+          </div>
         </div>
+      </section>
 
-        <section id="counselor-school" class="counselor-school">
-            <div class="container">
-                <h2 class="partners-title">Школа вожатого</h2>
-                <div class="counselor-school-content">
-                    <div class="counselor-school-image vertical-gallery">
-                        <img src="images/school/Image1.jpg" alt="Школа вожатого 1">
-                        <img src="images/school/image2.jpg" alt="Школа вожатого 2">
-                        <img src="images/school/image3.jpg" alt="Школа вожатого 3">
-                    </div>
-                    <div class="counselor-school-text">
-                        <p>Центр підготовки працівників «Зоряний Небосхил» - молода креативна та перспективна команда,
-                            яка започаткувала свою роботу ще 2014 року.
-                            Щороку наш заклад, традиційно у травні проводить практичну підготовку працівників у сфері
-                            дитячого оздоровлення та відпочинку (від вожатого до старшого вихователя).
-                            Вони впевнені, що у практиці інтенсивних форм роботи відкриваються зірки літнього дитячого
-                            дозвілля.
-                            Упродовж трьох днів студенти авторської програми «Зоряний Небосхил» переймають досвід роботи
-                            педагогів.
-                            Вони навчають організації проведення дитячого дозвілля, що робити у форс-мажорних ситуаціях,
-                            як допомогти дитині розкрити свої таланти.
-                            Обов'язковим включенням програми є заняття від запрошених експертів з організації дитячого
-                            відпочинку, досвідчених педагогів, розробників авторських програм, майстрів ігротехніки.
-                            Після проходження курсів, студенти школи вожатих отримують спеціальні свідоцтва.
-                            Саме центр підготовки працівників «Зоряний Небосхил» надає відмінну якісну підготовку до
-                            літа, радість від нових знайомств і вражень та щедрість на ідеї, досвід, надбання.
-                        </p>
-                        <div class="counselor-nav counselor-nav-compact">
-                            <button class="counselor-nav-btn counselor-nav-pink"><i
-                                    class="fa-solid fa-chalkboard-user"></i>Навчання</button>
-                            <button class="counselor-nav-btn counselor-nav-blue"><i
-                                    class="fa-solid fa-certificate"></i>Сертифікат</button>
-                            <button class="counselor-nav-btn counselor-nav-green"><i
-                                    class="fa-solid fa-people-group"></i>Практика</button>
-                            <button class="counselor-nav-btn counselor-nav-yellow"><i
-                                    class="fa-solid fa-star"></i>Лідерство</button>
-                        </div>
-                        <h3 class="mini-title">Зареєструватися</h3>
-                        <form class="counselor-form" method="post" action="https://script.google.com/macros/s/AKfycbySIUJrswO1AIWx4Zr7mtqxmg9u1rAS0XsnmaGEiTRd15IBzVZ6eSYq3-Ng2iQHikf0rA/exec" name="contact-form-SchCns" id="counselorSchoolForm">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="firstName">Імʼя</label>
-                                    <input type="text" id="firstName" name="firstName" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName">Прізвище</label>
-                                    <input type="text" id="lastName" name="lastName" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="phone">Номер телефону</label>
-                                    <input type="tel" id="phone" name="phone" required pattern="[0-9\-\+\s\(\)]*">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Електронна адреса</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="motivation">Мотиваційний лист</label>
-                                <textarea id="motivation" name="motivation" rows="4" required></textarea>
-                            </div>
-                            <button type="submit" class="button">Зареєструватись</button>
-                        </form>
-                    </div>
+      <section class="about" id="about">
+        <div class="container">
+          <h2 class="partners-title center-large-title">Про наш табір</h2>
+          <div class="about-content">
+            <div class="about-slider">
+              <button
+                class="about-slider-arrow left"
+                aria-label="Попереднє фото"
+              >
+                &#8592;
+              </button>
+              <div class="about-slider-main">
+                <img
+                  src="images/slider/1.png"
+                  alt="Головне фото табору"
+                  class="about-slider-main-img"
+                />
+              </div>
+              <button
+                class="about-slider-arrow right"
+                aria-label="Наступне фото"
+              >
+                &#8594;
+              </button>
+            </div>
+            <div class="about-text">
+              <p>
+                "Заклад розташований в екологічно чистому місці. Сьогодні на
+                його території, площею 9 гектарів, знаходяться стаціонарні
+                спальні корпуси, де можуть розміститися 384 дітей в одну зміну.
+                До послуг вихованців збалансоване 6-разове харчування (з
+                можливістю дієтичного) за рецептурою відомого кулінара Євгена
+                Клопотенка, кіно-концертна зала, бібліотека, кімнати для
+                гурткової роботи (прикладного, вокального, хореографічного
+                мистецтв, студії медіа-культури, студії етики та краси, школи
+                телеведучого), спортивні секції, різноманітні майстер-класи,
+                огороджений та облаштований пляж, альтанки, ігрові майданчики,
+                майданчик вуличних тренажерів, туристичне містечко, стадіон,
+                спортивні майданчики (футбол, міні-футбол - 2 шт., пляжний
+                волейбол, волейбол, для легкої атлетики, баскетбол, артбол,
+                бадмінтон ін.), вуличні тренажери, тренажерна зала, стежинка
+                здоров'я, прийом фіточаїів. Творчий педагогічний колектив
+                однодумців зробить усе можливе, щоб час, проведений Вашими
+                дітьми разом з нами, надовго залишив яскравий слід у юних серцях
+                та приємні спогади про нових друзів! Наша команда — це серце
+                табору. З кожним загоном працює досвідчений вихователь та двоє
+                енергійних вожатих (а в молодших загонах — троє!). Професійний
+                психолог, методист, педагог-організатор та старший вихователь
+                дбають про насичену, цікаву та безпечну програму відпочинку.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="container">
+          <h2 class="partners-title center-large-title">
+            Чому обирають "Зоряний"?
+          </h2>
+          <div class="features-grid">
+            <div class="feature-item">
+              <i class="fa-solid fa-clipboard-list feature-icon"></i>
+              <h3>Дисципліна та графік</h3>
+              <p>
+                Чіткий розпорядок дня, що привчає до самостійності та
+                відповідальності.
+              </p>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-briefcase-medical feature-icon"></i>
+              <h3>Безпека та мед. супровід</h3>
+              <p>
+                Цілодобовий медичний пункт та кваліфікований персонал для
+                безпеки ваших дітей.
+              </p>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-futbol feature-icon"></i>
+              <h3>Спортивні заходи</h3>
+              <p>
+                Щоденні змагання, естафети та активні ігри на свіжому повітрі.
+              </p>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-masks-theater feature-icon"></i>
+              <h3>Культурна програма</h3>
+              <p>
+                Тематичні дні, концерти, фестивалі талантів та творчі вечори.
+              </p>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-palette feature-icon"></i>
+              <h3>Розвиваємо у творчості</h3>
+              <p>
+                Величезний вибір гуртків, майстер-класів та творчих проєктів для
+                кожної дитини.
+              </p>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-record-vinyl feature-icon"></i>
+              <h3>Вечірні дискотеки</h3>
+              <p>Запальні танці під улюbлені хіти щовечора.</p>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-water-ladder feature-icon"></i>
+              <h3>Купання в річці</h3>
+              <p>
+                Освіжаюче купання у чистій річці Псел під наглядом інструкторів.
+              </p>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-utensils feature-icon"></i>
+              <h3>Шести разове харчування</h3>
+              <p>
+                Збалансоване, корисне та смачне меню. Готуємо смачно, як вдома!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="parents-info" id="parents-info">
+        <div class="container">
+          <h2 class="partners-title center-large-title">Важливе для батьків</h2>
+          <div class="accordion">
+            <div class="accordion-item">
+              <button
+                class="accordion-header"
+                type="button"
+                aria-expanded="false"
+                aria-controls="accordion-content-1"
+                id="accordion-header-1"
+              >
+                <i class="fa-solid fa-file-signature"></i>Оформлення путівки
+                <span class="accordion-detail-btn"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+              <div class="accordion-content" id="accordion-content-1" hidden>
+                <div class="accordion-info-box">
+                  <p>
+                    <strong>Шановні батьки!</strong><br />
+                    Пропонуємо ознайомитися з варіантами придбання путівки на
+                    оздоровчий сезон. Ви можете отримати її одним із наступних
+                    способів:
+                  </p>
+                  <ol>
+                    <li>
+                      <strong>100% оплата вартості путівки.</strong><br />
+                      Звертайтеся безпосередньо до секретаря підприємства.
+                      Контактні дані – у розділі "Контакти".
+                    </li>
+                    <li>
+                      <strong>Через профспілковий комітет.</strong><br />
+                      Зверніться до координатора з оздоровлення профспілки на
+                      вашому підприємстві. Після цього координатор зв'язується з
+                      нами, і ми укладаємо договір безпосередньо з вашим
+                      підприємством.
+                    </li>
+                    <li>
+                      <strong>Для тимчасово непрацевлаштованих.</strong><br />
+                      Скористайтеся обласною Програмою часткового відшкодування
+                      вартості путівки для дітей Полтавської області. Зверніться
+                      до органів міської, сільської або районної ради для
+                      внесення дитини до банку оздоровлення.<br />
+                      Наприклад, жителі Кременчуцької територіальної громади
+                      подають документи до ЦНАП. Після підтвердження можливості
+                      відшкодування зверніться до секретаря підприємства для
+                      подальших дій.
+                    </li>
+                    <li>
+                      <strong>Для соціальних категорій.</strong><br />
+                      Якщо дитина належить до пільгових категорій (багатодітна
+                      родина, сирота, дитина учасників бойових дій/АТО,
+                      відмінник, призер конкурсів), зверніться до органів
+                      місцевої влади.<br />
+                      У Кременчуці це — Департамент у справах сімей та дітей
+                      Кременчуцької міської ради. Там вас проконсультують щодо
+                      подальших дій.
+                    </li>
+                  </ol>
+                  <p>Обирайте зручний варіант та дійте!</p>
                 </div>
+              </div>
             </div>
-        </section>
-
-        <section class="documents-info" id="documents-info">
-            <div class="container documents-flex">
-
-                <!-- Секцію 'До відома батьків' видалено -->
+            <div class="accordion-item">
+              <button
+                class="accordion-header"
+                type="button"
+                aria-expanded="false"
+                aria-controls="accordion-content-2"
+                id="accordion-header-2"
+              >
+                <i class="fa-solid fa-file-signature"></i>Оформлення документів
+                <span class="accordion-detail-btn"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+              <div class="accordion-content" id="accordion-content-2" hidden>
+                <div class="accordion-info-box">
+                  <strong>НЕОБХІДНІ ДОКУМЕНТИ</strong><br />
+                  Для оформлення дитини у КНП "ДЗОВ "Зоряний":<br />
+                  1. Копія свідоцтва про народження дитини.<br />
+                  2. Путівка ДЗОВ "ЗОРЯНИЙ".<br />
+                  3. Медична довідка про стан здоров'я дитини (Форма 079/о).<br />
+                  4. Завірена ксерокопія картки профілактичних щеплень (Форма
+                  063/о).
+                </div>
+              </div>
             </div>
-        </section>
-
-        <!-- Секцію 'Відправлення дітей до табору' видалено -->
-
-        <!-- Секцію 'Зустріч дітей батьками' видалено -->
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2 class="partners-title center-large-title">Контакти та запис</h2>
-                <p>Хочете дізнатись більше або познайомитись із керівництвом? Чекаємо на вас у нашому офісі або
-                    телефонуйте!</p>
-                <div class="contact-content">
+            <div class="accordion-item">
+              <button
+                class="accordion-header"
+                type="button"
+                aria-expanded="false"
+                aria-controls="accordion-content-3"
+                id="accordion-header-3"
+              >
+                <i class="fa-solid fa-list-check"></i>Основні правила прийому
+                дітей у табір
+                <span class="accordion-detail-btn"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+              <div class="accordion-content" id="accordion-content-3" hidden>
+                <div class="accordion-info-box">
+                  <h3>Шановні батьки!</h3>
+                  <p>
+                    Ваші діти вирушають у дитячий заклад оздоровлення та
+                    відпочинку на літній відпочинок. Щоб літо пройшло добре, і
+                    діти повернулися додому задоволеними та здоровими, потрібно
+                    пам'ятати ряд правил і умов.<br />
+                    У ДЗОВ "ЗОРЯНИЙ" приймаються здорові діти або діти, що мають
+                    хронічні захворювання поза загостреннями, що не вимагають
+                    санаторно-курортного лікування і мають відповідний дозвіл
+                    лікаря.<br />
+                    Діти, що мають хронічні захворювання у стадії загострення,
+                    що страждають частими нападами (судоми, астматичні напади і
+                    т.ін.), вимагають підтримуючу терапію до оздоровчого закладу
+                    не приймаються.<br />
+                    Такі діти підлягають санаторному лікуванню.<br />
+                    До нашого закладу приймаються діти віком від 7 до 17
+                    років.<br />
+                    Усі діти застраховані.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button
+                class="accordion-header"
+                type="button"
+                aria-expanded="false"
+                aria-controls="accordion-content-4"
+                id="accordion-header-4"
+              >
+                <i class="fa-solid fa-suitcase-rolling"></i>Збираємо валізу
+                <span class="accordion-detail-btn"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+              <div class="accordion-content" id="accordion-content-4" hidden>
+                <div class="accordion-info-box">
+                  <ul>
+                    <li>Головний убір</li>
+                    <li>Святковий одяг</li>
+                    <li>Рушники</li>
+                    <li>Носові хустинки</li>
+                    <li>Нижня білизна</li>
+                    <li>Шкарпетки</li>
+                    <li>Теплий та повсякденний одяг</li>
+                    <li>Спортивний одяг</li>
+                    <li>Взуття</li>
+                    <li>Засоби особистої гігієни</li>
+                    <li>2-3 улюbлені книги</li>
+                    <li>Музичні інструменти (за бажанням)</li>
+                  </ul>
+                  <p>
+                    <em
+                      >Рекомендуємо не брати зайвих речей — усе має поміститися
+                      в одну валізу або сумку, яку дитина зможе нести
+                      самостійно.</em
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button
+                class="accordion-header"
+                type="button"
+                aria-expanded="false"
+                aria-controls="accordion-content-5"
+                id="accordion-header-5"
+              >
+                <i class="fa-solid fa-ban"></i>Заборонені речі
+                <span class="accordion-detail-btn"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+              <div class="accordion-content" id="accordion-content-5" hidden>
+                <div class="accordion-info-box">
+                  <ul>
+                    <li>наркотичні та токсичні речовини;</li>
+                    <li>
+                      алкогольні напої, у тому числі слабоалкогольні енергетики;
+                    </li>
+                    <li>тютюнові вироби;</li>
+                    <li>
+                      піротехнічні засоби, легкозаймисті речовини, сірники,
+                      запальнички;
+                    </li>
+                    <li>зброю;</li>
+                    <li>домашніх тварин.</li>
+                  </ul>
+                </div>
+                <div class="warning-box">
+                  <p>
+                    <strong
+                      >У разі виявлення у дитини вищеперелічених предметів вона
+                      буде достроково відрахована з табору без відшкодування
+                      вартості путівки.</strong
+                    >
+                  </p>
+                  <p>
+                    <strong
+                      >Якщо ж у дитини будуть виявлені наркотичні речовини,
+                      справа буде передана у поліцію.</strong
+                    >
+                  </p>
+                  <p>
+                    <strong
+                      >Працівники КНП "ДЗОВ "ЗОРЯНИЙ" не несуть відповідальність
+                      за псування, зникнення або крадіжку дитячих речей,
+                      предметів і грошей, не зданих на зберігання.</strong
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button
+                class="accordion-header"
+                type="button"
+                aria-expanded="false"
+                aria-controls="accordion-content-6"
+                id="accordion-header-6"
+              >
+                <i class="fa-solid fa-people-group"></i>Розподіл по загонах
+                <span class="accordion-detail-btn"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+              <div class="accordion-content" id="accordion-content-6" hidden>
+                <div class="accordion-info-box">
+                  <p>
+                    Розподіл у загони відбувається на території закладу згідно
+                    віку дітей. Побажання батьків при розподілі дітей у загони
+                    враховуються по можливості.
+                  </p>
+                  <p>
+                    Ми не рекомендуємо орієнтувати Ваших дітей на перебування в
+                    одному загоні у разі, якщо різниця у віці між ними перевищує
+                    2-3 роки. Якщо такі діти потраплять у загін за віком старшої
+                    дитини, молодшому буде складно адаптуватися в загоні, якщо
+                    за віком молодшого - старшому буде нудно.
+                  </p>
+                  <p>
+                    Адміністрація закладу залишає за собою право в день заїзду
+                    переводити дітей в інший загін без їх узгодження.
+                  </p>
+                  <p>
+                    Слід попередити старшого вихователя, якщо за певними
+                    причинами дитина не прибула до закладу у перший день зміни,
+                    щоб зарезервувати місце у загоні згідно віку дитини.
+                  </p>
+                  <p>
+                    Якщо Ви привозите свою дитину в табір уже після формування
+                    загонів, адміністрація ДЗОВ визначить Вашу дитину у той
+                    загін, який максимально відповідає його віку, в якому буде
+                    вільне місце.
+                  </p>
+                </div>
+                <div class="parents-notice notice-green">
+                  <h3>Шановні батьки!</h3>
+                  <p>
+                    У перший день вихователь або вожатий загону, у якому
+                    перебуває Ваша дитина, обов'язково зателефонує Вам. Усі
+                    запитання, які будуть хвилювати Вас у той момент, зможете
+                    озвучити педагогам закладу.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button
+                class="accordion-header"
+                type="button"
+                aria-expanded="false"
+                aria-controls="accordion-content-7"
+                id="accordion-header-7"
+              >
+                <i class="fa-solid fa-calendar-check"></i>Виїзд та повернення
+                <span class="accordion-detail-btn"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+              <div class="accordion-content" id="accordion-content-7" hidden>
+                <div class="accordion-info-box">
+                  <h3>Відправлення дітей до табору</h3>
+                  <ol>
+                    <li>
+                      Реєстрація та від'їзд дітей проводиться у перший день
+                      табірної зміни, вказаної у путівці за адресою: площа
+                      Перемоги, 2 (біля входу до парку "Придніпровський").
+                    </li>
+                    <li>
+                      Реєстрація розпочинається о 8.00 ранку. При реєстрації
+                      спочатку необхідно пройти огляд у лікаря табору. Лікар має
+                      право відмовити дитині в прийомі у заклад за наявності
+                      певних проблем із здоров'ям, відсутності медичних
+                      документів або їх неправильному оформленні.
+                    </li>
+                    <li>
+                      Після цього треба зареєструвати дитину у вихователів
+                      закладу. Якщо не встигли зареєструвати і передати дитину
+                      вихователям закладу вчасно, Ви повинні звернутися до
+                      адміністрації ДЗОВ "ЗОРЯНИЙ".
+                    </li>
+                  </ol>
+                  <p>
+                    Не варто в день відправлення годувати дитині занадто щільним
+                    сніданком, особливо якщо його вколисує.<br />
+                    Не слід дозволяти дітям їсти чіпси, сухарі і тому подібне,
+                    пити надто багато рідини.
+                  </p>
+                  <hr />
+                  <h3>Зустріч дітей батьками</h3>
+                </div>
+                <div class="departure-warning">
+                  <strong>УВАГА!</strong><br />
+                  На посадці формуються тільки групи дітей для здійснення
+                  трансферу їх у табір, а не загони.
+                </div>
+                <div class="accordion-info-box">
+                  <div class="meeting-content">
+                    <ul class="meeting-rules">
+                      <li>
+                        По приїзду в табір, звертайтеся до охорони на КПП з
+                        проханням покликати вашу дитину. Повідомите їм її
+                        прізвище, ім'я, номер загону. Якщо номер загону
+                        невідомий, то Вам обов'язково допоможуть (список дітей є
+                        на КПП, або звертайтеся адміністрації табору).
+                      </li>
+                      <li>
+                        Відповідно до "Санітарних правил і норм України",
+                        "Типового положення про дитячі оздоровчі табори
+                        України", а також "Правилами внутрішнього розпорядку
+                        ДЗОВ "Зоряний", пересування батьків територією табору,
+                        відвідування спальних корпусів і інших приміщень
+                        <strong>КАТЕГОРИЧНО ЗАБОРОНЕНЕ</strong>.
+                      </li>
+                      <li>
+                        Батькам заборонено привозити дітям,
+                        <strong>УСЕ те, що перераховано ВИЩЕ</strong>
+                      </li>
+                      <li>
+                        Діти не ввідаються батькам, іншим особам, які
+                        знаходяться у нетверезому стані або під дією
+                        наркотичних, токсичних речовин.
+                      </li>
+                    </ul>
+                    <div class="important-notice">
+                      <h3>Памʼятайте:</h3>
+                      <p>
+                        Часте провідування дитини відволікає її від табірної
+                        програми і заважає її адаптації!
+                      </p>
+                    </div>
                     <div class="contact-info">
-                        <div class="contact-details">
-                            <p><strong>Адреса офісу:</strong> м. Кременчук, Полтавська обл. (уточніть адресу за
-                                телефоном)</p>
-                            <p><strong>Телефон:</strong> +38 (097) 205-50-81</p>
-                            <p><strong>Email:</strong> kr.zorianyi@gmail.com</p>
-                        </div>
-                        <div class="contact-socials">
-                            <a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i
-                                    class="fab fa-instagram"></i></a>
-                            <a href="https://youtube.com/" target="_blank" aria-label="YouTube"><i
-                                    class="fab fa-youtube"></i></a>
-                        </div>
-                        <button class="button">Завітати до офісу</button>
+                      <p>
+                        На усі питання, що цікавлять Вас, про життя дітей у
+                        таборі у повному обсязі нададуть відповідь загонові
+                        педагоги, психолог і представники адміністрації.
+                      </p>
                     </div>
-                    <div class="contact-map">
-                        <iframe src="https://www.google.com/maps?q=Кременчук,+Полтавська+область,+Україна&output=embed"
-                            width="100%" height="320"
-                            style="border:0; border-radius:12px; box-shadow:0 2px 12px rgba(74,144,226,0.08);"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                            title="Карта Кременчук"></iframe>
-                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+            <div class="accordion-item">
+              <button
+                class="accordion-header"
+                type="button"
+                aria-expanded="false"
+                aria-controls="accordion-content-8"
+                id="accordion-header-8"
+              >
+                <i class="fa-solid fa-people-roof"></i>Дитина їде до табору
+                вперше!
+                <span class="accordion-detail-btn"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+              <div class="accordion-content" id="accordion-content-8" hidden>
+                <div class="accordion-info-box">
+                  <p>
+                    <strong>Що робити, якщо дитина у табір їде вперше?</strong>
+                  </p>
+                  <p>
+                    Адаптація дітей до нових для них умов тимчасового дитячого
+                    колективу - це складний і клопіткий психолого-педагогічний
+                    процес, пов'язаний з необхідністю використання кожною
+                    дитиною (а тим більше, новачком) усіх умінь і навичок
+                    самостійності, концентрації усіх його особових якостей і рис
+                    характеру.
+                  </p>
+                  <p>
+                    Тому, <strong>БАТЬКИ</strong>, намагайтеся не турбувати
+                    дитину телефонними дзвінками, а тим більше відвідуваннями,
+                    під час періоду адаптації: перші 3-4 дні. Цілком нормальний
+                    стан, коли дитина скучає за мамою і татом, а Ваш приїзд може
+                    викликати у нього бажання поїхати додому.
+                  </p>
+                  <p>
+                    Багато хто з батьків одного разу замислюється: "А чи не
+                    відправити дитину на літо в табір? Там спілкування і
+                    розваги, відпочинок і розвиток, та і навички самостійності
+                    дитина отримає, нарешті!"
+                  </p>
+                  <p>
+                    Насправді, все не так просто. Самостійність не з'явиться за
+                    лічені дні, як загар. Ця якість - результат багаторічного
+                    виховання, плід батьківської праці. І якщо ви можете з
+                    упевненістю сказати про свою дитину, що вона самостійна - в
+                    таборі йому, швидше за все, буде легко. Інакше, поїздка в
+                    табір може стати справжнім випробуванням і для дитини, і для
+                    батьків, які вдома не знаходять собі місця.
+                  </p>
+                </div>
+                <div class="parents-notice notice-green">
+                  <h3>
+                    <span class="parents-notice-title">Нагадування!</span>
+                  </h3>
+                  <p>
+                    У таборі діти отримують 6-разове збалансоване харчування.
+                    Дорога до табору триває 30-40 хвилин. Тому не потрібно
+                    давати дитині зайву їжу — у нас їй буде комфортно та смачно!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button
+                class="accordion-header"
+                type="button"
+                aria-expanded="false"
+                aria-controls="accordion-content-9"
+                id="accordion-header-9"
+              >
+                <i class="fa-solid fa-chalkboard-user"></i>Правила перебування у
+                таборі
+                <span class="accordion-detail-btn"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+              <div class="accordion-content" id="accordion-content-9" hidden>
+                <div class="accordion-info-box">
+                  <p><strong>Правила перебування у таборі</strong></p>
+                  <p>
+                    У нашому таборі встановлений режим дня, який передбачає
+                    активну участь дитини у різний видах діяльності.
+                  </p>
+                  <p>
+                    Прищеплюючи дитині навички самостійності, ми залучаємо її до
+                    елементарної праці, що включає прибирання свого спального
+                    місця, утримання в порядку особистих речей, дотримання норм
+                    особистої гігієни, чергування в кімнаті, їдальні, підтримка
+                    в порядку закріпленої території.
+                  </p>
+                  <p>
+                    Адміністрація закладу переконливо просить вас, шановані
+                    батьки, провести зі своїми дітьми бесіду про необхідність
+                    дбайливого відношення до матеріальних цінностей табору і
+                    налаштувати на те, що дитина мешкатиме в умовах нового
+                    колективу зі встановленими правилами і режимом дня.
+                  </p>
+                  <p>
+                    У разі навмисного нанесення дитиною збитків майну
+                    підприємства, батьки або організація, що направила її в
+                    табір, несуть майнову відповідальність у розмірі заподіяного
+                    збитку.
+                  </p>
+                  <p>
+                    <strong
+                      >Особливу увагу просимо приділити питанням дотримання
+                      правил особистої гігієни дитиною, а саме:</strong
+                    >
+                  </p>
+                  <ul>
+                    <li>вмиватися і мити ноги перед сном;</li>
+                    <li>
+                      спати, роздягшись до нижньої білизни, а не в спортивному
+                      костюмі, наприклад, або навіть у взутті.
+                    </li>
+                  </ul>
+                  <p>
+                    Приїзд дитини в табір вважається згодою дитини і його
+                    батьків на виконання правил, встановлених у КНП "ДЗОВ
+                    "ЗОРЯНИЙ".
+                  </p>
+                  <p>
+                    У таборі працюють компетентні, кваліфіковані і досвідчені
+                    вихователі та вожаті, яким ви довіряєте своїх дітей. Але
+                    кожна дитина індивідуальна, іноді вихователеві/ вожатому
+                    нелегко порозумітися з ким-небудь з дітей, знайти підхід.
+                    Тому батьки повинні, віддаючи дітей у заклад, повідомити
+                    педагога про індивідуальні психологічні, поведінкові,
+                    фізіологічні особливості своєї дитини.
+                  </p>
+                  <p>
+                    Якщо у вашої дитини під час перебування в таборі виникають
+                    які-небудь проблеми, і він соромиться звернутися до
+                    працівників табору, будь ласка, повідомте про ці проблеми
+                    педагогів загону, щоб спільними зусиллями ми змогли
+                    врегулювати ситуацію.
+                  </p>
+                  <p>
+                    Свої взаємовідносини з дітьми і їх батьками співробітники
+                    табору будують на принципах довіри, взаєморозуміння,
+                    толерантності і терпимості.
+                  </p>
+                  <p>
+                    Просимо і вас дотримуватися цих же принципів по відношенню
+                    до працівників КНП "ДЗОВ "Зоряний".
+                  </p>
+                  <p>
+                    <strong
+                      >Ми, співробітники КНП "ДЗОВ "ЗОРЯНИЙ", хочемо завірити
+                      вас, що зробимо все можливе, щоб відпочинок у нас
+                      запам'ятався вашій дитині тільки з кращої сторони. І
+                      побувавши тут одного разу, вона захотіла знову повернутися
+                      в наш табір.</strong
+                    >
+                  </p>
+                  <hr />
+                  <p><strong>КОРИСНІ ПОРАДИ БАТЬКАМ</strong></p>
+                  <ul>
+                    <li>
+                      Дітям у віці 7-9 років бажано помітити речі індивідуальною
+                      міткою, а також напишіть їм список зібраних речей і
+                      покладіть у сумку.
+                    </li>
+                    <li>
+                      Не варто давати дитині надто багато речей. Бажано, щоб усі
+                      вони помістилися в одну дорожну/спортивну сумку або валізу
+                      (нести речі від автобуса до спального корпусу дитина буде
+                      самостійно).
+                    </li>
+                    <li>
+                      Зауважте, що у дітей дорога до табору триватиме 30-40
+                      хвилин, також їх чекає 6-разове харчування. Тому давати з
+                      собою їжу швидкого псування категорично забороняється!
+                    </li>
+                    <li>
+                      Дозволено мати при собі негазовану або слабогазовану воду,
+                      цукерки (карамельки, льодяники), галетне печиво і тому
+                      подібне.
+                    </li>
+                    <li>
+                      Продукти харчування швидкого псування, які ви дасте
+                      дитині, будуть знешкоджені в день заїзду в табір.
+                    </li>
+                    <li>
+                      Заборонені шкідливі продукти (чіпси, сухарики, шоколадні
+                      чи кремові вироби, газовані солодкі напої, їжа швидкого
+                      приготування тощо) будуть зібрані та передані вам при
+                      першій можливості.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button
+                class="accordion-header"
+                type="button"
+                aria-expanded="false"
+                aria-controls="accordion-content-10"
+                id="accordion-header-10"
+              >
+                <i class="fa-solid fa-utensils"></i>Продукти харчування які
+                можна/заборонено привозити до табору
+                <span class="accordion-detail-btn"
+                  ><i class="fa-solid fa-chevron-down"></i
+                ></span>
+              </button>
+              <div class="accordion-content" id="accordion-content-10" hidden>
+                <div class="food-products-grid">
+                  <div class="food-allowed">
+                    <div class="food-section-header">
+                      <i class="fa-solid fa-check-circle"></i>
+                      <h4>Дозволено привозити</h4>
+                    </div>
+                    <ul>
+                      <li>Негазовану або слабогазовану воду</li>
+                      <li>Цукерки (карамельки, льодяники)</li>
+                      <li>Галетне печиво</li>
+                      <li>Сухофрукти (родзинки, курага, чорнослив)</li>
+                      <li>Горіхи (невелика кількість)</li>
+                      <li>Соки в пакетах (невелика кількість)</li>
+                    </ul>
+                  </div>
+                  <div class="food-forbidden">
+                    <div class="food-section-header">
+                      <i class="fa-solid fa-ban"></i>
+                      <h4>Категорично заборонено</h4>
+                    </div>
+                    <ul>
+                      <li>
+                        Продукти швидкого псування (молочні, м'ясні, рибні)
+                      </li>
+                      <li>Варені яйця/ салати</li>
+                      <li>Чіпси, сухарики, солоні закуски</li>
+                      <li>Шоколадні чи кремові вироби</li>
+                      <li>Газовані солодкі напої</li>
+                      <li>Їжа швидкого приготування</li>
+                      <li>Консерви</li>
+                      <li>Солодощі з кремом або начинкою</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="warning-box">
+                  <p><strong>УВАГА!</strong></p>
+                  <p>
+                    Продукти харчування швидкого псування, які ви дасте дитині,
+                    будуть знешкоджені в день заїзду в табір.
+                  </p>
+                  <p>
+                    Заборонені шкідливі продукти (чіпси, сухарики, шоколадні чи
+                    кремові вироби, газовані солодкі напої, їжа швидкого
+                    приготування тощо) будуть зібрані та передані вам при першій
+                    можливості.
+                  </p>
+                </div>
+                <div class="parents-notice notice-green">
+                  <h3>
+                    <span class="parents-notice-title">Нагадування!</span>
+                  </h3>
+                  <p>
+                    У таборі діти отримують 6-разове збалансоване харчування.
+                    Дорога до табору триває 30-40 хвилин. Тому не потрібно
+                    давати дитині зайву їжу - у нас їй буде комфортно та смачно!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="shifts-prices" class="shifts-prices">
+        <div class="container">
+          <h2 class="partners-title center-large-title">
+            Зміни та вартість — Літо 2026
+          </h2>
+          <div class="shifts-prices-content">
+            <div class="shifts-info">
+              <h3>Зміни відпочинку</h3>
+              <ul>
+                <li><strong>І зміна:</strong> 01.06 - 21.06</li>
+                <li><strong>ІІ зміна:</strong> 23.06 - 13.07</li>
+                <li><strong>ІІІ зміна:</strong> 15.07 - 04.08</li>
+                <li><strong>ІV зміна:</strong> 06.08 - 26.08</li>
+              </ul>
+            </div>
+            <div class="prices-info">
+              <h3>Вартість путівок</h3>
+              <ul>
+                <li><strong>І зміна:</strong> ****** грн. 00 коп.</li>
+                <li><strong>ІІ зміна:</strong> ****** грн. 00 коп.</li>
+                <li><strong>ІІІ зміна:</strong> ****** грн. 00 коп.</li>
+                <li><strong>ІV зміна:</strong> ****** грн. 00 коп.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="gallery">
+        <div class="container">
+          <h2 class="partners-title center-large-title">
+            Фотогалерея "Життя в Зоряному"
+          </h2>
+          <div class="gallery-slider">
+            <div class="gallery-slider-track">
+              <div class="gallery-slide">
+                <img src="images/gallery/1.jpg" alt="Життя в таборі 1" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/2.jpg" alt="Життя в таборі 2" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/3.jpg" alt="Життя в таборі 3" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/4.jpg" alt="Життя в таборі 4" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/5.jpg" alt="Життя в таборі 5" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/6.jpg" alt="Життя в таборі 6" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/7.jpg" alt="Життя в таборі 7" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/8.jpg" alt="Життя в таборі 8" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/9.jpg" alt="Життя в таборі 9" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/10.jpg" alt="Життя в таборі 10" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/11.jpg" alt="Життя в таборі 11" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/12.jpg" alt="Життя в таборі 12" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/13.jpg" alt="Життя в таборі 13" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/14.jpg" alt="Життя в таборі 14" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/15.jpg" alt="Життя в таборі 15" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/16.jpg" alt="Життя в таборі 16" />
+              </div>
+              <div class="gallery-slide">
+                <img src="images/gallery/17.jpg" alt="Життя в таборі 17" />
+              </div>
+            </div>
+            <div class="gallery-slider-arrows">
+              <button
+                class="gallery-slider-arrow left"
+                aria-label="Попереднє фото"
+              >
+                &#8592;
+              </button>
+              <button
+                class="gallery-slider-arrow right"
+                aria-label="Наступне фото"
+              >
+                &#8594;
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="gallery-lightbox-overlay" id="galleryLightbox">
+        <img
+          class="gallery-lightbox-img"
+          id="galleryLightboxImg"
+          src=""
+          alt="Збільшене фото"
+        />
+      </div>
+
+      <section id="counselor-school" class="counselor-school">
+        <div class="container">
+          <h2 class="partners-title">Школа вожатого</h2>
+          <div class="counselor-school-content">
+            <div class="counselor-school-image vertical-gallery">
+              <img src="images/school/Image1.jpg" alt="Школа вожатого 1" />
+              <img src="images/school/image2.jpg" alt="Школа вожатого 2" />
+              <img src="images/school/image3.jpg" alt="Школа вожатого 3" />
+            </div>
+            <div class="counselor-school-text">
+              <p>
+                Центр підготовки працівників «Зоряний Небосхил» - молода
+                креативна та перспективна команда, яка започаткувала свою роботу
+                ще 2014 року. Щороку наш заклад, традиційно у травні проводить
+                практичну підготовку працівників у сфері дитячого оздоровлення
+                та відпочинку (від вожатого до старшого вихователя). Вони
+                впевнені, що у практиці інтенсивних форм роботи відкриваються
+                зірки літнього дитячого дозвілля. Упродовж трьох днів студенти
+                авторської програми «Зоряний Небосхил» переймають досвід роботи
+                педагогів. Вони навчають організації проведення дитячого
+                дозвілля, що робити у форс-мажорних ситуаціях, як допомогти
+                дитині розкрити свої таланти. Обов'язковим включенням програми є
+                заняття від запрошених експертів з організації дитячого
+                відпочинку, досвідчених педагогів, розробників авторських
+                програм, майстрів ігротехніки. Після проходження курсів,
+                студенти школи вожатих отримують спеціальні свідоцтва. Саме
+                центр підготовки працівників «Зоряний Небосхил» надає відмінну
+                якісну підготовку до літа, радість від нових знайомств і вражень
+                та щедрість на ідеї, досвід, надбання.
+              </p>
+              <div class="counselor-nav counselor-nav-compact">
+                <button class="counselor-nav-btn counselor-nav-pink">
+                  <i class="fa-solid fa-chalkboard-user"></i>Навчання
+                </button>
+                <button class="counselor-nav-btn counselor-nav-blue">
+                  <i class="fa-solid fa-certificate"></i>Сертифікат
+                </button>
+                <button class="counselor-nav-btn counselor-nav-green">
+                  <i class="fa-solid fa-people-group"></i>Практика
+                </button>
+                <button class="counselor-nav-btn counselor-nav-yellow">
+                  <i class="fa-solid fa-star"></i>Лідерство
+                </button>
+              </div>
+              <h3 class="mini-title">Зареєструватися</h3>
+              <form
+                class="counselor-form"
+                method="post"
+                action="https://script.google.com/macros/s/AKfycbySIUJrswO1AIWx4Zr7mtqxmg9u1rAS0XsnmaGEiTRd15IBzVZ6eSYq3-Ng2iQHikf0rA/exec"
+                name="contact-form-SchCns"
+                id="counselorSchoolForm"
+              >
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="firstName">Імʼя</label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName">Прізвище</label>
+                    <input type="text" id="lastName" name="lastName" required />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="phone">Номер телефону</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      required
+                      pattern="[0-9\-\+\s\(\)]*"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Електронна адреса</label>
+                    <input type="email" id="email" name="email" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="motivation">Мотиваційний лист</label>
+                  <textarea
+                    id="motivation"
+                    name="motivation"
+                    rows="4"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="button">Зареєструватись</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="documents-info" id="documents-info">
+        <div class="container documents-flex">
+          <!-- Секцію 'До відома батьків' видалено -->
+        </div>
+      </section>
+
+      <!-- Секцію 'Відправлення дітей до табору' видалено -->
+
+      <!-- Секцію 'Зустріч дітей батьками' видалено -->
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <h2 class="partners-title center-large-title">Контакти та запис</h2>
+          <p>
+            Хочете дізнатись більше або познайомитись із керівництвом? Чекаємо
+            на вас у нашому офісі або телефонуйте!
+          </p>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-details">
+                <p>
+                  <strong>Адреса офісу:</strong> м. Кременчук, Полтавська обл.
+                  (уточніть адресу за телефоном)
+                </p>
+                <p><strong>Телефон:</strong> +38 (097) 205-50-81</p>
+                <p><strong>Email:</strong> kr.zorianyi@gmail.com</p>
+              </div>
+              <div class="contact-socials">
+                <a
+                  href="https://facebook.com/"
+                  target="_blank"
+                  aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  href="https://instagram.com/"
+                  target="_blank"
+                  aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  href="https://youtube.com/"
+                  target="_blank"
+                  aria-label="YouTube"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+              <button class="button">Завітати до офісу</button>
+            </div>
+            <div class="contact-map">
+              <iframe
+                src="https://www.google.com/maps?q=Кременчук,+Полтавська+область,+Україна&output=embed"
+                width="100%"
+                height="320"
+                style="
+                  border: 0;
+                  border-radius: 12px;
+                  box-shadow: 0 2px 12px rgba(74, 144, 226, 0.08);
+                "
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Карта Кременчук"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <section id="partners" class="partners">
-        <div class="container">
-            <h2 class="partners-title">Наші партнери</h2>
-            <div class="partners-logos">
-                <!-- Замість зовнішніх картинок використовуйте локальні: images/partners/partner1.png, partner2.png, partner3.png -->
-                <div class="partner-logo">
-                    <img src="" alt="Партнер 1">
-                </div>
-                <div class="partner-logo">
-                    <img src="" alt="Партнер 2">
-                </div>
-                <div class="partner-logo">
-                    <img src="" alt="Партнер 3">
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="partners-title">Наші партнери</h2>
+        <div class="partners-logos">
+          <!-- Замість зовнішніх картинок використовуйте локальні: images/partners/partner1.png, partner2.png, partner3.png -->
+          <div class="partner-logo">
+            <img src="" alt="Партнер 1" />
+          </div>
+          <div class="partner-logo">
+            <img src="" alt="Партнер 2" />
+          </div>
+          <div class="partner-logo">
+            <img src="" alt="Партнер 3" />
+          </div>
         </div>
+      </div>
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Дитячий табір "Зоряний". Всі права захищено.</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2025 Дитячий табір "Зоряний". Всі права захищено.</p>
+      </div>
     </footer>
 
     <!-- Модальне вікно для бронювання -->
     <div class="booking-modal" id="bookingModal">
-        <div class="booking-modal-content">
-            <div class="booking-modal-header">
-                <h3>Бронювання путівки</h3>
-            </div>
-            <div class="booking-modal-body">
-
-                <div class="gender-buttons">
-                    <button class="gender-button boy-button" data-gender="boy">
-                        <img src="images/modal/boy.png" alt="Хлопчик" class="gender-icon">
-                        <span>Хлопчик</span>
-                    </button>
-                    <button class="gender-button girl-button" data-gender="girl">
-                        <img src="images/modal/girl.png" alt="Дівчинка" class="gender-icon">
-                        <span>Дівчинка</span>
-                    </button>
-                </div>
-                <div class="boy-age-dropdown" id="boyAgeDropdown" style="display:none;">
-                    <div class="boy-age-buttons">
-                        <button class="gender-button boy-age-btn" data-age="6-10">6-10 років</button>
-                        <button class="gender-button boy-age-btn" data-age="11-17">11-17 років</button>
-                    </div>
-                </div>
-                <div class="girl-age-dropdown" id="girlAgeDropdown" style="display:none;">
-                    <div class="girl-age-buttons">
-                        <button class="gender-button girl-age-btn" data-age="6-10">6-10 років</button>
-                        <button class="gender-button girl-age-btn" data-age="11-17">11-17 років</button>
-                    </div>
-                </div>
-                <button class="close-button" id="bookingModalClose">Закрити</button>
-            </div>
+      <div class="booking-modal-content">
+        <div class="booking-modal-header">
+          <h3>Бронювання путівки</h3>
         </div>
+        <div class="booking-modal-body">
+          <div class="gender-buttons">
+            <button class="gender-button boy-button" data-gender="boy">
+              <img
+                src="images/modal/boy.png"
+                alt="Хлопчик"
+                class="gender-icon"
+              />
+              <span>Хлопчик</span>
+            </button>
+            <button class="gender-button girl-button" data-gender="girl">
+              <img
+                src="images/modal/girl.png"
+                alt="Дівчинка"
+                class="gender-icon"
+              />
+              <span>Дівчинка</span>
+            </button>
+          </div>
+          <div
+            class="boy-age-dropdown"
+            id="boyAgeDropdown"
+            style="display: none"
+          >
+            <div class="boy-age-buttons">
+              <button class="gender-button boy-age-btn" data-age="6-10">
+                6-10 років
+              </button>
+              <button class="gender-button boy-age-btn" data-age="11-17">
+                11-17 років
+              </button>
+            </div>
+          </div>
+          <div
+            class="girl-age-dropdown"
+            id="girlAgeDropdown"
+            style="display: none"
+          >
+            <div class="girl-age-buttons">
+              <button class="gender-button girl-age-btn" data-age="6-10">
+                6-10 років
+              </button>
+              <button class="gender-button girl-age-btn" data-age="11-17">
+                11-17 років
+              </button>
+            </div>
+          </div>
+          <button class="close-button" id="bookingModalClose">Закрити</button>
+        </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>

@@ -1,19 +1,19 @@
 // BUTTON FLASH + CONFETTI
 function initButtons() {
-  document.querySelectorAll('.button').forEach(function(btn) {
-    btn.addEventListener('click', function(e) {
+  document.querySelectorAll(".button").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
       // Prevent re-triggering during the flash animation
-      if (btn.classList.contains('toggled')) {
+      if (btn.classList.contains("toggled")) {
         return;
       }
-      
+
       // Flash blue and show confetti
-      btn.classList.add('toggled');
+      btn.classList.add("toggled");
       showConfetti(btn);
 
       // Return to pink after a short delay
-      setTimeout(function() {
-        btn.classList.remove('toggled');
+      setTimeout(function () {
+        btn.classList.remove("toggled");
       }, 400); // Duration of the flash
     });
   });
@@ -23,40 +23,53 @@ function showConfetti(button) {
   // Sound effect for confetti
   function playConfettiSound() {
     try {
-      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-      
+      const audioContext = new (window.AudioContext ||
+        window.webkitAudioContext)();
+
       // Create multiple oscillators for rich sound
       for (let i = 0; i < 3; i++) {
         const oscillator = audioContext.createOscillator();
         const gainNode = audioContext.createGain();
-        
+
         oscillator.connect(gainNode);
         gainNode.connect(audioContext.destination);
-        
+
         // Different frequencies for variety
         const frequencies = [800, 1200, 1600];
-        oscillator.frequency.setValueAtTime(frequencies[i], audioContext.currentTime);
-        oscillator.frequency.exponentialRampToValueAtTime(frequencies[i] * 0.5, audioContext.currentTime + 0.3);
-        
+        oscillator.frequency.setValueAtTime(
+          frequencies[i],
+          audioContext.currentTime
+        );
+        oscillator.frequency.exponentialRampToValueAtTime(
+          frequencies[i] * 0.5,
+          audioContext.currentTime + 0.3
+        );
+
         // Volume envelope
         gainNode.gain.setValueAtTime(0, audioContext.currentTime);
-        gainNode.gain.linearRampToValueAtTime(0.1, audioContext.currentTime + 0.01);
-        gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
-        
+        gainNode.gain.linearRampToValueAtTime(
+          0.1,
+          audioContext.currentTime + 0.01
+        );
+        gainNode.gain.exponentialRampToValueAtTime(
+          0.01,
+          audioContext.currentTime + 0.3
+        );
+
         oscillator.start(audioContext.currentTime);
         oscillator.stop(audioContext.currentTime + 0.3);
       }
     } catch (e) {
       // Fallback for browsers that don't support Web Audio API
-      console.log('Audio not supported');
+      console.log("Audio not supported");
     }
   }
 
   // Play sound immediately
   playConfettiSound();
 
-  const canvas = document.createElement('canvas');
-  const ctx = canvas.getContext('2d');
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
   canvas.style.cssText = `
     position: fixed;
     top: 0;
@@ -77,10 +90,18 @@ function showConfetti(button) {
     canvas.height = window.innerHeight;
   }
   resize();
-  window.addEventListener('resize', resize);
+  window.addEventListener("resize", resize);
 
   const particles = [];
-  const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8'];
+  const colors = [
+    "#FF6B6B",
+    "#4ECDC4",
+    "#45B7D1",
+    "#96CEB4",
+    "#FFEAA7",
+    "#DDA0DD",
+    "#98D8C8",
+  ];
 
   function random(min, max) {
     return Math.random() * (max - min) + min;
@@ -111,7 +132,7 @@ function showConfetti(button) {
       decay: random(0.01, 0.03),
       color: colors[Math.floor(random(0, colors.length))],
       size: random(3, 8),
-      type: Math.random() > 0.5 ? 'circle' : 'star'
+      type: Math.random() > 0.5 ? "circle" : "star",
     };
   }
 
@@ -124,7 +145,7 @@ function showConfetti(button) {
 
     for (let i = particles.length - 1; i >= 0; i--) {
       const p = particles[i];
-      
+
       p.x += p.vx;
       p.y += p.vy;
       p.vy += 0.1; // gravity
@@ -139,7 +160,7 @@ function showConfetti(button) {
       ctx.globalAlpha = p.life;
       ctx.fillStyle = p.color;
 
-      if (p.type === 'star') {
+      if (p.type === "star") {
         drawStar(p.x, p.y, p.size, 5);
         ctx.fill();
       } else {
@@ -161,4 +182,4 @@ function showConfetti(button) {
   draw();
 }
 
-export { initButtons }; 
+export { initButtons };
