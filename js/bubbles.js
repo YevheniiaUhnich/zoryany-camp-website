@@ -1,4 +1,3 @@
-// BUBBLES AND STARS ANIMATION
 function initBubblesAnimation() {
   const canvas = document.getElementById("bubbles-canvas");
   if (!canvas) return;

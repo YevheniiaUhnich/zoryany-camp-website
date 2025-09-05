@@ -1,39 +1,27 @@
-// Accordion logic for 'Важливе для батьків'
 export function initAccordion() {
-  console.log("initAccordion called");
   const items = document.querySelectorAll(".accordion-item");
-  console.log("Accordion items found:", items.length);
-
-  items.forEach((item, index) => {
+  items.forEach((item) => {
     const header = item.querySelector(".accordion-header");
     const content = item.querySelector(".accordion-content");
+    if (!header || !content || header.dataset.bound) return;
 
-    console.log(`Item ${index}:`, { header: !!header, content: !!content });
+    header.dataset.bound = "1";
+    header.addEventListener("click", () => {
+      const container = item.closest(".accordion") || document;
+      const expanded = header.getAttribute("aria-expanded") === "true";
 
-    if (header && content) {
-      header.addEventListener("click", function (e) {
-        console.log("Accordion header clicked:", e.target);
-        const expanded = header.getAttribute("aria-expanded") === "true";
+      // закриваємо тільки в межах контейнера
+      container
+        .querySelectorAll(".accordion-header")
+        .forEach((h) => h.setAttribute("aria-expanded", "false"));
+      container
+        .querySelectorAll(".accordion-content")
+        .forEach((c) => (c.hidden = true));
 
-        // Закриваємо всі
-        document.querySelectorAll(".accordion-header").forEach((h) => {
-          h.setAttribute("aria-expanded", "false");
-        });
-        document.querySelectorAll(".accordion-content").forEach((c) => {
-          c.hidden = true;
-        });
-
-        // Відкриваємо поточний, якщо був закритий
-        if (!expanded) {
-          header.setAttribute("aria-expanded", "true");
-          content.hidden = false;
-          console.log("Accordion opened");
-        } else {
-          console.log("Accordion closed");
-        }
-      });
-
-      console.log(`Event listener added to item ${index}`);
-    }
+      if (!expanded) {
+        header.setAttribute("aria-expanded", "true");
+        content.hidden = false;
+      }
+    });
   });
 }
